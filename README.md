@@ -16,11 +16,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/shifpeng/tencentcloud-im-sdk-php.git"
+      "url": "https://github.com/TencentCloud/tencentcloud-im-sdk-php.git"
     }
   ],
   "require": {
-    "shifpeng/tencentcloud-im-sdk-php": "*@dev"
+    "TencentCloud/tencentcloud-im-sdk-php": "*@dev"
   }
 }
 ```
