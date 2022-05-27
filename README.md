@@ -341,8 +341,9 @@ Class | Method | HTTP request | Description
  All endpoints do not require authorization.
 
 
-## Author
+## Contact
 
+ 腾讯云IM REST API SDK 技术交流QQ群
 
-
+ <img src="images/img_group01.png" width="30%" height="30%" />
 
