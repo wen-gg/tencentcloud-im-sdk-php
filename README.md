@@ -342,7 +342,8 @@ Class | Method | HTTP request | Description
 
 
 ## Contact
-
  腾讯云IM REST API SDK 技术交流QQ群
+
+ QQ群号:909322484
 
  <img src="images/img_group_01.png" width="30%" height="30%" />
