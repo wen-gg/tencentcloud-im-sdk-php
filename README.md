@@ -345,5 +345,4 @@ Class | Method | HTTP request | Description
 
  腾讯云IM REST API SDK 技术交流QQ群
 
- <img src="images/img_group01.png" width="30%" height="30%" />
-
+ <img src="images/img_group_01.png" width="30%" height="30%" />
