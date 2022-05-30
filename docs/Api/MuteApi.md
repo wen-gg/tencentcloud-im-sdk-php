@@ -39,7 +39,7 @@ $getNoSpeakingRequest = new \TencentCloud\IM\Model\GetNoSpeakingRequest(); // \T
 
 try {
     $result = $apiInstance->getnospeaking($random, $getNoSpeakingRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MuteApi->getnospeaking: ', $e->getMessage(), PHP_EOL;
 }
@@ -99,7 +99,7 @@ $setNoSpeakingRequest = new \TencentCloud\IM\Model\SetNoSpeakingRequest(); // \T
 
 try {
     $result = $apiInstance->setnospeaking($random, $setNoSpeakingRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MuteApi->setnospeaking: ', $e->getMessage(), PHP_EOL;
 }

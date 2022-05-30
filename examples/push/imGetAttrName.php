@@ -21,7 +21,7 @@ $imGetAttrNameRequest = new \TencentCloud\IM\Model\ImGetAttrNameRequest(); // \T
 
 try {
     $result = $apiInstance->imGetAttrName($random, $imGetAttrNameRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imGetAttrName: ', $e->getMessage(), PHP_EOL;
 }

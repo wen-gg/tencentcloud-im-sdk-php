@@ -21,7 +21,7 @@ $kickRequest->setUserID("");
 
 try {
     $result = $apiInstance->kick($random, $kickRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->kick: ', $e->getMessage(), PHP_EOL;
 }

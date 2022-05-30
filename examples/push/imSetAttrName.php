@@ -16,11 +16,12 @@ $apiInstance = new TencentCloud\IM\Api\AllMemberPushApi(
 $random = 56; // int |
 $imSetAttrNameRequest = new \TencentCloud\IM\Model\ImSetAttrNameRequest(); // \TencentCloud\IM\Model\ImSetAttrNameRequest |
 //TODO: Set the request parameters
-$imSetAttrNameRequest->setAttrNames(array("0" => ""));
+$attr_name['2'] = "sex";
+$imSetAttrNameRequest->setAttrNames($attr_name);
 
 try {
     $result = $apiInstance->imSetAttrName($random, $imSetAttrNameRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imSetAttrName: ', $e->getMessage(), PHP_EOL;
 }

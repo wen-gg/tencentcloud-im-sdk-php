@@ -20,7 +20,7 @@ $imRemoveAllTagRequest->setToAccount(array(""));
 
 try {
     $result = $apiInstance->imRemoveAllTags($random, $imRemoveAllTagRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imRemoveAllTags: ', $e->getMessage(), PHP_EOL;
 }

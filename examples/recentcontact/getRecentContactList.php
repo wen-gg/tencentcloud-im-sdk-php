@@ -26,7 +26,7 @@ $getRecentContactListGroupGetRequest->setTopTimeStamp(0);
 
 try {
     $result = $apiInstance->getRecentContactList($random, $getRecentContactListGroupGetRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecentContactApi->getRecentContactList: ', $e->getMessage(), PHP_EOL;
 }

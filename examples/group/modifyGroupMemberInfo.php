@@ -22,7 +22,7 @@ $modifyGroupMemberInfoRequest->setRole("Member");
 
 try {
     $result = $apiInstance->modifyGroupMemberInfo($random, $modifyGroupMemberInfoRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->modifyGroupMemberInfo: ', $e->getMessage(), PHP_EOL;
 }

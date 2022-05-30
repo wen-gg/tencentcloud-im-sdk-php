@@ -44,7 +44,7 @@ $getRoamMsgRequest = new \TencentCloud\IM\Model\GetRoamMsgRequest(); // \Tencent
 
 try {
     $result = $apiInstance->adminGetroammsg($random, $getRoamMsgRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SingleChatApi->adminGetroammsg: ', $e->getMessage(), PHP_EOL;
 }
@@ -104,7 +104,7 @@ $msgWithdrawRequest = new \TencentCloud\IM\Model\MsgWithdrawRequest(); // \Tence
 
 try {
     $result = $apiInstance->adminMsgwithdraw($random, $msgWithdrawRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SingleChatApi->adminMsgwithdraw: ', $e->getMessage(), PHP_EOL;
 }
@@ -164,7 +164,7 @@ $setMsgReadRequest = new \TencentCloud\IM\Model\SetMsgReadRequest(); // \Tencent
 
 try {
     $result = $apiInstance->adminSetMsgRead($random, $setMsgReadRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SingleChatApi->adminSetMsgRead: ', $e->getMessage(), PHP_EOL;
 }
@@ -224,7 +224,7 @@ $batchSendSingleChatMsgRequest = new \TencentCloud\IM\Model\BatchSendSingleChatM
 
 try {
     $result = $apiInstance->batchsendmsg($random, $batchSendSingleChatMsgRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SingleChatApi->batchsendmsg: ', $e->getMessage(), PHP_EOL;
 }
@@ -284,7 +284,7 @@ $getC2cUnreadMsgNumRequest = new \TencentCloud\IM\Model\GetC2cUnreadMsgNumReques
 
 try {
     $result = $apiInstance->getC2cUnreadMsgNum($random, $getC2cUnreadMsgNumRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SingleChatApi->getC2cUnreadMsgNum: ', $e->getMessage(), PHP_EOL;
 }
@@ -344,7 +344,7 @@ $importMsgRequest = new \TencentCloud\IM\Model\ImportMsgRequest(); // \TencentCl
 
 try {
     $result = $apiInstance->importmsg($random, $importMsgRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SingleChatApi->importmsg: ', $e->getMessage(), PHP_EOL;
 }
@@ -404,7 +404,7 @@ $sendSingleChatMsgRequest = new \TencentCloud\IM\Model\SendSingleChatMsgRequest(
 
 try {
     $result = $apiInstance->sendmsg($random, $sendSingleChatMsgRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SingleChatApi->sendmsg: ', $e->getMessage(), PHP_EOL;
 }

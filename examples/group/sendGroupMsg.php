@@ -22,7 +22,7 @@ $sendGroupMsgRequest->setMsgBody(array(0 => array("MsgType" => "TIMTextElem", "M
 
 try {
     $result = $apiInstance->sendGroupMsg($random, $sendGroupMsgRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->sendGroupMsg: ', $e->getMessage(), PHP_EOL;
 }

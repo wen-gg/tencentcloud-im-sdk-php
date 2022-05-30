@@ -20,7 +20,7 @@ $clearGroupAttrRequest->setGroupId("");
 
 try {
     $result = $apiInstance->clearGroupAttr($random, $clearGroupAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->clearGroupAttr: ', $e->getMessage(), PHP_EOL;
 }

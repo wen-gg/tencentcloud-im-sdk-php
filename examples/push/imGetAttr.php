@@ -16,11 +16,11 @@ $apiInstance = new TencentCloud\IM\Api\AllMemberPushApi(
 $random = 56; // int |
 $imGetAttrRequest = new \TencentCloud\IM\Model\ImGetAttrRequest(); // \TencentCloud\IM\Model\ImGetAttrRequest |
 //TODO: Set the request parameters
-$imGetAttrRequest->setToAccount(array(""));
+$imGetAttrRequest->setToAccount(array("10007556"));
 
 try {
     $result = $apiInstance->imGetAttr($random, $imGetAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imGetAttr: ', $e->getMessage(), PHP_EOL;
 }

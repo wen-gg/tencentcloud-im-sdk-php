@@ -21,7 +21,7 @@ $deleteGroupMemberRequest->setMemberToDelAccount(array(""));
 
 try {
     $result = $apiInstance->deleteGroupMember($random, $deleteGroupMemberRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->deleteGroupMember: ', $e->getMessage(), PHP_EOL;
 }

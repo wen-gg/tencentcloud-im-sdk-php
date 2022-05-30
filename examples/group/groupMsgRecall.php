@@ -20,7 +20,7 @@ $groupMsgRecallRequest->setGroupId("");
 $groupMsgRecallRequest->setMsgSeqList(array(0 => array("MsgSeq" => 1)));
 try {
     $result = $apiInstance->groupMsgRecall($random, $groupMsgRecallRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->groupMsgRecall: ', $e->getMessage(), PHP_EOL;
 }

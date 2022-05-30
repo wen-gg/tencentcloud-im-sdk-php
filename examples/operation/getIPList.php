@@ -20,7 +20,7 @@ $getIPListRequest = new \TencentCloud\IM\Model\GetIPListRequest(); // \TencentCl
 
 try {
     $result = $apiInstance->getIPList($random, $getIPListRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OperationApi->getIPList: ', $e->getMessage(), PHP_EOL;
 }

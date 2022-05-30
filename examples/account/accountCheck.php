@@ -23,7 +23,7 @@ $account_check_request->setCheckItem($items);
 $random = 123456789;
 try {
     $result = $apiInstance->accountCheck($random, $account_check_request);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->accountCheck: ', $e->getMessage(), PHP_EOL;
 }

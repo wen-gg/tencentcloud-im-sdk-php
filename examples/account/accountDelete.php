@@ -21,7 +21,7 @@ $accountDeleteRequest->setDeleteItem(array(0 => array("UserID" => "")));
 
 try {
     $result = $apiInstance->accountDelete($random, $accountDeleteRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->accountDelete: ', $e->getMessage(), PHP_EOL;
 }

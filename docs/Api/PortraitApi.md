@@ -39,7 +39,7 @@ $portraitGetRequest = new \TencentCloud\IM\Model\PortraitGetRequest(); // \Tence
 
 try {
     $result = $apiInstance->portraitGet($random, $portraitGetRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PortraitApi->portraitGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -99,7 +99,7 @@ $portraitSetRequest = new \TencentCloud\IM\Model\PortraitSetRequest(); // \Tence
 
 try {
     $result = $apiInstance->portraitSet($random, $portraitSetRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PortraitApi->portraitSet: ', $e->getMessage(), PHP_EOL;
 }

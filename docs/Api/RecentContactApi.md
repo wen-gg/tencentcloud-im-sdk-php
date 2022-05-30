@@ -39,7 +39,7 @@ $getRecentContactListGroupDeleteRequest = new \TencentCloud\IM\Model\GetRecentCo
 
 try {
     $result = $apiInstance->deleteRecentContact($random, $getRecentContactListGroupDeleteRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecentContactApi->deleteRecentContact: ', $e->getMessage(), PHP_EOL;
 }
@@ -99,7 +99,7 @@ $getRecentContactListGroupGetRequest = new \TencentCloud\IM\Model\GetRecentConta
 
 try {
     $result = $apiInstance->getRecentContactList($random, $getRecentContactListGroupGetRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecentContactApi->getRecentContactList: ', $e->getMessage(), PHP_EOL;
 }

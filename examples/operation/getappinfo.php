@@ -20,7 +20,7 @@ $getAppInfoRequest = new \TencentCloud\IM\Model\GetAppInfoRequest(); // \Tencent
 
 try {
     $result = $apiInstance->getappinfo($random, $getAppInfoRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OperationApi->getappinfo: ', $e->getMessage(), PHP_EOL;
 }

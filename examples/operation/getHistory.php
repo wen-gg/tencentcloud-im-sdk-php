@@ -21,7 +21,7 @@ $getOperateMsgHistoryRequest->setChatType("");
 
 try {
     $result = $apiInstance->getHistory($random, $getOperateMsgHistoryRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OperationApi->getHistory: ', $e->getMessage(), PHP_EOL;
 }

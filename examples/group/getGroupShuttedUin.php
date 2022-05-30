@@ -20,7 +20,7 @@ $getGroupShuttedUinRequest->setGroupId("");
 
 try {
     $result = $apiInstance->getGroupShuttedUin($random, $getGroupShuttedUinRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getGroupShuttedUin: ', $e->getMessage(), PHP_EOL;
 }

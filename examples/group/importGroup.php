@@ -22,7 +22,7 @@ $importGroupRequest->setName("");
 
 try {
     $result = $apiInstance->importGroup($random, $importGroupRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->importGroup: ', $e->getMessage(), PHP_EOL;
 }

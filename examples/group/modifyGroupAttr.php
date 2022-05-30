@@ -21,7 +21,7 @@ $modifyGroupAttrRequest->setGroupAttr(array(0 => array("key" => "key1","value" =
 
 try {
     $result = $apiInstance->modifyGroupAttr($random, $modifyGroupAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->modifyGroupAttr: ', $e->getMessage(), PHP_EOL;
 }

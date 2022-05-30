@@ -21,7 +21,7 @@ $sendGroupSystemNotificationRequest->setContent("");
 
 try {
     $result = $apiInstance->sendGroupSystemNotification($random, $sendGroupSystemNotificationRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->sendGroupSystemNotification: ', $e->getMessage(), PHP_EOL;
 }

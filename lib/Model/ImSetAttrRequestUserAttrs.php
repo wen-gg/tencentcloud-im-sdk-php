@@ -1,6 +1,6 @@
 <?php
 /**
- * ImSetAttrRequest
+ * ImSetAttrRequestUserAttrs
  *
  * PHP version 5
  *
@@ -28,13 +28,13 @@ use \ArrayAccess;
 use \TencentCloud\IM\ObjectSerializer;
 
 /**
- * ImSetAttrRequest Class Doc Comment
+ * ImSetAttrRequestUserAttrs Class Doc Comment
  *
  * @category Class
  * @package  TencentCloud\IM
 
  */
-class ImSetAttrRequest implements ModelInterface, ArrayAccess
+class ImSetAttrRequestUserAttrs implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -43,7 +43,7 @@ class ImSetAttrRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ImSetAttrRequest';
+    protected static $openAPIModelName = 'ImSetAttrRequest_UserAttrs';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -51,7 +51,8 @@ class ImSetAttrRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'userAttrs' => '\TencentCloud\IM\Model\ImSetAttrRequestUserAttrs[]'
+        'toAccount' => 'string',
+        'attrs' => 'object'
     ];
 
     /**
@@ -60,7 +61,8 @@ class ImSetAttrRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'userAttrs' => null
+        'toAccount' => null,
+        'attrs' => null
     ];
 
     /**
@@ -90,7 +92,8 @@ class ImSetAttrRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'userAttrs' => 'UserAttrs'
+        'toAccount' => 'To_Account',
+        'attrs' => 'Attrs'
     ];
 
     /**
@@ -99,7 +102,8 @@ class ImSetAttrRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'userAttrs' => 'setUserAttrs'
+        'toAccount' => 'setToAccount',
+        'attrs' => 'setAttrs'
     ];
 
     /**
@@ -108,7 +112,8 @@ class ImSetAttrRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'userAttrs' => 'getUserAttrs'
+        'toAccount' => 'getToAccount',
+        'attrs' => 'getAttrs'
     ];
 
     /**
@@ -171,7 +176,8 @@ class ImSetAttrRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['userAttrs'] = isset($data['userAttrs']) ? $data['userAttrs'] : null;
+        $this->container['toAccount'] = isset($data['toAccount']) ? $data['toAccount'] : null;
+        $this->container['attrs'] = isset($data['attrs']) ? $data['attrs'] : null;
     }
 
     /**
@@ -199,25 +205,49 @@ class ImSetAttrRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets userAttrs
+     * Gets toAccount
      *
-     * @return \TencentCloud\IM\Model\ImSetAttrRequestUserAttrs[]|null
+     * @return string|null
      */
-    public function getUserAttrs()
+    public function getToAccount()
     {
-        return $this->container['userAttrs'];
+        return $this->container['toAccount'];
     }
 
     /**
-     * Sets userAttrs
+     * Sets toAccount
      *
-     * @param \TencentCloud\IM\Model\ImSetAttrRequestUserAttrs[]|null $userAttrs userAttrs
+     * @param string|null $toAccount 用户帐号
      *
      * @return $this
      */
-    public function setUserAttrs($userAttrs)
+    public function setToAccount($toAccount)
     {
-        $this->container['userAttrs'] = $userAttrs;
+        $this->container['toAccount'] = $toAccount;
+
+        return $this;
+    }
+
+    /**
+     * Gets attrs
+     *
+     * @return object|null
+     */
+    public function getAttrs()
+    {
+        return $this->container['attrs'];
+    }
+
+    /**
+     * Sets attrs
+     *
+     * @param object|null $attrs 属性内容
+     *
+     * @return $this
+     */
+    public function setAttrs($attrs)
+    {
+        $this->container['attrs'] = $attrs;
 
         return $this;
     }

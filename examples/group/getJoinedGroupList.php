@@ -20,7 +20,7 @@ $getJoinedGroupListRequest->setMemberAccount("");
 
 try {
     $result = $apiInstance->getJoinedGroupList($random, $getJoinedGroupListRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getJoinedGroupList: ', $e->getMessage(), PHP_EOL;
 }

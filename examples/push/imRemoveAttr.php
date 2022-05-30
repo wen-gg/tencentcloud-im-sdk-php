@@ -21,7 +21,7 @@ $imRemoveAttrRequest->setAttrs(array(""));
 
 try {
     $result = $apiInstance->imRemoveAttr($random, $imRemoveAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imRemoveAttr: ', $e->getMessage(), PHP_EOL;
 }

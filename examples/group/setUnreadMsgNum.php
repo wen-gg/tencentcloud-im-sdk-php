@@ -22,7 +22,7 @@ $setUnreadMsgNumRequest->setUnreadMsgNum(1);
 
 try {
     $result = $apiInstance->setUnreadMsgNum($random, $setUnreadMsgNumRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->setUnreadMsgNum: ', $e->getMessage(), PHP_EOL;
 }

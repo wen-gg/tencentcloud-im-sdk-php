@@ -205,7 +205,7 @@ class ImGetAttrNameResponse extends CommonResponse
     /**
      * Sets attrNames
      *
-     * @param object|null $attrNames 包含多个键对。每对键值对，表示第几个属性对应的名称。例如\"0\":\"\"表示第0号属性的名称是 xxx
+     * @param object|null $attrNames 包含多个键对。每对键值对，表示第几个属性对应的名称。例如\"0\":\"xxx\"表示第0号属性的名称是 xxx
      *
      * @return $this
      */

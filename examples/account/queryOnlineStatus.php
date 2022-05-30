@@ -21,7 +21,7 @@ $queryOnlineStatusRequest->setToAccount(array(""));
 
 try {
     $result = $apiInstance->queryOnlineStatus($random, $queryOnlineStatusRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->queryOnlineStatus: ', $e->getMessage(), PHP_EOL;
 }

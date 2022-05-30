@@ -22,7 +22,7 @@ $importGroupMsgRequest->setMsgList(array(0 => array("From_Account" => "", "SendT
 
 try {
     $result = $apiInstance->importGroupMsg($random, $importGroupMsgRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->importGroupMsg: ', $e->getMessage(), PHP_EOL;
 }

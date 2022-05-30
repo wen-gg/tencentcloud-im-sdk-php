@@ -22,7 +22,7 @@ $imPushRequest->setMsgBody(array(0 => array('MsgType' => "TIMTextElem", "MsgCont
 
 try {
     $result = $apiInstance->imPush($random, $imPushRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imPush: ', $e->getMessage(), PHP_EOL;
 }

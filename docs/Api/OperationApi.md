@@ -40,7 +40,7 @@ $getOperateMsgHistoryRequest = new \TencentCloud\IM\Model\GetOperateMsgHistoryRe
 
 try {
     $result = $apiInstance->getHistory($random, $getOperateMsgHistoryRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OperationApi->getHistory: ', $e->getMessage(), PHP_EOL;
 }
@@ -100,7 +100,7 @@ $getIPListRequest = new \TencentCloud\IM\Model\GetIPListRequest(); // \TencentCl
 
 try {
     $result = $apiInstance->getIPList($random, $getIPListRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OperationApi->getIPList: ', $e->getMessage(), PHP_EOL;
 }
@@ -160,7 +160,7 @@ $getAppInfoRequest = new \TencentCloud\IM\Model\GetAppInfoRequest(); // \Tencent
 
 try {
     $result = $apiInstance->getappinfo($random, $getAppInfoRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OperationApi->getappinfo: ', $e->getMessage(), PHP_EOL;
 }

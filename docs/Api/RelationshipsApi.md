@@ -52,7 +52,7 @@ $blackListAddRequest = new \TencentCloud\IM\Model\BlackListAddRequest(); // \Ten
 
 try {
     $result = $apiInstance->blackListAdd($random, $blackListAddRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->blackListAdd: ', $e->getMessage(), PHP_EOL;
 }
@@ -112,7 +112,7 @@ $blackListCheckRequest = new \TencentCloud\IM\Model\BlackListCheckRequest(); // 
 
 try {
     $result = $apiInstance->blackListCheck($random, $blackListCheckRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->blackListCheck: ', $e->getMessage(), PHP_EOL;
 }
@@ -172,7 +172,7 @@ $blackListDeleteRequest = new \TencentCloud\IM\Model\BlackListDeleteRequest(); /
 
 try {
     $result = $apiInstance->blackListDelete($random, $blackListDeleteRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->blackListDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -232,7 +232,7 @@ $blackListGetRequest = new \TencentCloud\IM\Model\BlackListGetRequest(); // \Ten
 
 try {
     $result = $apiInstance->blackListGet($random, $blackListGetRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->blackListGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -292,7 +292,7 @@ $friendAddRequest = new \TencentCloud\IM\Model\FriendAddRequest(); // \TencentCl
 
 try {
     $result = $apiInstance->friendAdd($random, $friendAddRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->friendAdd: ', $e->getMessage(), PHP_EOL;
 }
@@ -352,7 +352,7 @@ $friendCheckRequest = new \TencentCloud\IM\Model\FriendCheckRequest(); // \Tence
 
 try {
     $result = $apiInstance->friendCheck($random, $friendCheckRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->friendCheck: ', $e->getMessage(), PHP_EOL;
 }
@@ -412,7 +412,7 @@ $friendDeleteRequest = new \TencentCloud\IM\Model\FriendDeleteRequest(); // \Ten
 
 try {
     $result = $apiInstance->friendDelete($random, $friendDeleteRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->friendDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -472,7 +472,7 @@ $friendDeleteAllRequest = new \TencentCloud\IM\Model\FriendDeleteAllRequest(); /
 
 try {
     $result = $apiInstance->friendDeleteAll($random, $friendDeleteAllRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->friendDeleteAll: ', $e->getMessage(), PHP_EOL;
 }
@@ -532,7 +532,7 @@ $friendGetRequest = new \TencentCloud\IM\Model\FriendGetRequest(); // \TencentCl
 
 try {
     $result = $apiInstance->friendGet($random, $friendGetRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->friendGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -592,7 +592,7 @@ $friendGetListRequest = new \TencentCloud\IM\Model\FriendGetListRequest(); // \T
 
 try {
     $result = $apiInstance->friendGetList($random, $friendGetListRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->friendGetList: ', $e->getMessage(), PHP_EOL;
 }
@@ -652,7 +652,7 @@ $friendImportRequest = new \TencentCloud\IM\Model\FriendImportRequest(); // \Ten
 
 try {
     $result = $apiInstance->friendImport($random, $friendImportRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->friendImport: ', $e->getMessage(), PHP_EOL;
 }
@@ -712,7 +712,7 @@ $friendUpdateRequest = new \TencentCloud\IM\Model\FriendUpdateRequest(); // \Ten
 
 try {
     $result = $apiInstance->friendUpdate($random, $friendUpdateRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->friendUpdate: ', $e->getMessage(), PHP_EOL;
 }
@@ -772,7 +772,7 @@ $groupAddRequest = new \TencentCloud\IM\Model\GroupAddRequest(); // \TencentClou
 
 try {
     $result = $apiInstance->groupAdd($random, $groupAddRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->groupAdd: ', $e->getMessage(), PHP_EOL;
 }
@@ -832,7 +832,7 @@ $groupDeleteRequest = new \TencentCloud\IM\Model\GroupDeleteRequest(); // \Tence
 
 try {
     $result = $apiInstance->groupDelete($random, $groupDeleteRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->groupDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -892,7 +892,7 @@ $groupGetRequest = new \TencentCloud\IM\Model\GroupGetRequest(); // \TencentClou
 
 try {
     $result = $apiInstance->groupGet($random, $groupGetRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RelationshipsApi->groupGet: ', $e->getMessage(), PHP_EOL;
 }

@@ -2,6 +2,7 @@
 require_once(__DIR__ . '/../../vendor/autoload.php');
 
 use TencentCloud\IM\Configuration;
+use TencentCloud\IM\Model\ImSetAttrRequestUserAttrs;
 
 $config = new Configuration();
 $config->setSdkappid(0);
@@ -16,12 +17,17 @@ $apiInstance = new TencentCloud\IM\Api\AllMemberPushApi(
 $random = 56; // int |
 $imSetAttrRequest = new \TencentCloud\IM\Model\ImSetAttrRequest(); // \TencentCloud\IM\Model\ImSetAttrRequest |
 //TODO: Set the request parameters
-$imSetAttrRequest->setToAccount("");
-$imSetAttrRequest->setAttrs(array("" => ""));
+
+$setUserAttrs = new ImSetAttrRequestUserAttrs();
+$setUserAttrs->setToAccount("");
+$attr['age'] = "11";
+$setUserAttrs->setAttrs($attr);
+$imSetAttrRequest->setUserAttrs([$setUserAttrs]);
+
 
 try {
     $result = $apiInstance->imSetAttr($random, $imSetAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imSetAttr: ', $e->getMessage(), PHP_EOL;
 }

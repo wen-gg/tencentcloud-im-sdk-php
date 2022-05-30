@@ -43,7 +43,7 @@ $accountCheckRequest = new \TencentCloud\IM\Model\AccountCheckRequest(); // \Ten
 
 try {
     $result = $apiInstance->accountCheck($random, $accountCheckRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->accountCheck: ', $e->getMessage(), PHP_EOL;
 }
@@ -103,7 +103,7 @@ $accountDeleteRequest = new \TencentCloud\IM\Model\AccountDeleteRequest(); // \T
 
 try {
     $result = $apiInstance->accountDelete($random, $accountDeleteRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->accountDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -163,7 +163,7 @@ $accountImportRequest = new \TencentCloud\IM\Model\AccountImportRequest(); // \T
 
 try {
     $result = $apiInstance->accountImport($random, $accountImportRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->accountImport: ', $e->getMessage(), PHP_EOL;
 }
@@ -223,7 +223,7 @@ $kickRequest = new \TencentCloud\IM\Model\KickRequest(); // \TencentCloud\IM\Mod
 
 try {
     $result = $apiInstance->kick($random, $kickRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->kick: ', $e->getMessage(), PHP_EOL;
 }
@@ -283,7 +283,7 @@ $multiAccountImportRequest = new \TencentCloud\IM\Model\MultiAccountImportReques
 
 try {
     $result = $apiInstance->multiAccountImport($random, $multiAccountImportRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->multiAccountImport: ', $e->getMessage(), PHP_EOL;
 }
@@ -343,7 +343,7 @@ $queryOnlineStatusRequest = new \TencentCloud\IM\Model\QueryOnlineStatusRequest(
 
 try {
     $result = $apiInstance->queryOnlineStatus($random, $queryOnlineStatusRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->queryOnlineStatus: ', $e->getMessage(), PHP_EOL;
 }

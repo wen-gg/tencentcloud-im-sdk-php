@@ -22,7 +22,7 @@ $importGroupMemberRequest->setMemberList(array(0 => array("Member_Account" => ""
 
 try {
     $result = $apiInstance->importGroupMember($random, $importGroupMemberRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->importGroupMember: ', $e->getMessage(), PHP_EOL;
 }

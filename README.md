@@ -20,7 +20,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "tencentcloud/tencentcloud-im-sdk-php": "^1.0.1"
+    "tencentcloud/tencentcloud-im-sdk-php": "^1.0.2"
   }
 }
 ```
@@ -71,7 +71,7 @@ $accountCheckRequest = new \TencentCloud\IM\Model\AccountCheckRequest(); // \Ten
 
 try {
     $result = $apiInstance->accountCheck($random, $accountCheckRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->accountCheck: ', $e->getMessage(), PHP_EOL;
 }
@@ -278,6 +278,7 @@ Class | Method | HTTP request | Description
  - [ImRemoveTagRequest](docs/Model/ImRemoveTagRequest.md)
  - [ImSetAttrNameRequest](docs/Model/ImSetAttrNameRequest.md)
  - [ImSetAttrRequest](docs/Model/ImSetAttrRequest.md)
+ - [ImSetAttrRequestUserAttrs](docs/Model/ImSetAttrRequestUserAttrs.md)
  - [ImageInfo](docs/Model/ImageInfo.md)
  - [ImportGroupMemberRequest](docs/Model/ImportGroupMemberRequest.md)
  - [ImportGroupMemberRequestMemberList](docs/Model/ImportGroupMemberRequestMemberList.md)

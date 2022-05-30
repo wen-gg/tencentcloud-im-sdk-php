@@ -21,7 +21,7 @@ $getRoleInGroupRequest->setUserAccount(array(""));
 
 try {
     $result = $apiInstance->getRoleInGroup($random, $getRoleInGroupRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getRoleInGroup: ', $e->getMessage(), PHP_EOL;
 }

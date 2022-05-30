@@ -21,7 +21,7 @@ $deleteGroupMsgBySenderRequest->setSenderAccount("");
 
 try {
     $result = $apiInstance->deleteGroupMsgBySender($random, $deleteGroupMsgBySenderRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->deleteGroupMsgBySender: ', $e->getMessage(), PHP_EOL;
 }

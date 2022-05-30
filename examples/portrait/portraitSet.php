@@ -21,7 +21,7 @@ $portraitSetRequest->setProfileItem(array(0 => array("Tag" => "", "Value" => "")
 
 try {
     $result = $apiInstance->portraitSet($random, $portraitSetRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PortraitApi->portraitSet: ', $e->getMessage(), PHP_EOL;
 }

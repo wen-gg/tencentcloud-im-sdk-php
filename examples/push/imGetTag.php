@@ -20,7 +20,7 @@ $imGetTagRequest->setToAccount(array(""));
 
 try {
     $result = $apiInstance->imGetTag($random, $imGetTagRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imGetTag: ', $e->getMessage(), PHP_EOL;
 }

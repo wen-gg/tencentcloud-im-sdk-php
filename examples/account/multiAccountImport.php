@@ -21,7 +21,7 @@ $multiAccountImportRequest->setAccounts(array(""));
 
 try {
     $result = $apiInstance->multiAccountImport($random, $multiAccountImportRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountApi->multiAccountImport: ', $e->getMessage(), PHP_EOL;
 }

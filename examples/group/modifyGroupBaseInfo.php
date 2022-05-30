@@ -21,7 +21,7 @@ $modifyGroupBaseInfoRequest->setGroupId("");
 
 try {
     $result = $apiInstance->modifyGroupBaseInfo($random, $modifyGroupBaseInfoRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->modifyGroupBaseInfo: ', $e->getMessage(), PHP_EOL;
 }

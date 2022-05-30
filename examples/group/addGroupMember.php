@@ -22,7 +22,7 @@ $addGroupMemberRequest->setMemberList(array(0 => array("Member_Account" => "")))
 
 try {
     $result = $apiInstance->addGroupMember($random, $addGroupMemberRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->addGroupMember: ', $e->getMessage(), PHP_EOL;
 }

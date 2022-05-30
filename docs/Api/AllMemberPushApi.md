@@ -47,7 +47,7 @@ $imAddTagRequest = new \TencentCloud\IM\Model\ImAddTagRequest(); // \TencentClou
 
 try {
     $result = $apiInstance->imAddTag($random, $imAddTagRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imAddTag: ', $e->getMessage(), PHP_EOL;
 }
@@ -107,7 +107,7 @@ $imGetAttrRequest = new \TencentCloud\IM\Model\ImGetAttrRequest(); // \TencentCl
 
 try {
     $result = $apiInstance->imGetAttr($random, $imGetAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imGetAttr: ', $e->getMessage(), PHP_EOL;
 }
@@ -167,7 +167,7 @@ $imGetAttrNameRequest = new \TencentCloud\IM\Model\ImGetAttrNameRequest(); // \T
 
 try {
     $result = $apiInstance->imGetAttrName($random, $imGetAttrNameRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imGetAttrName: ', $e->getMessage(), PHP_EOL;
 }
@@ -227,7 +227,7 @@ $imGetTagRequest = new \TencentCloud\IM\Model\ImGetTagRequest(); // \TencentClou
 
 try {
     $result = $apiInstance->imGetTag($random, $imGetTagRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imGetTag: ', $e->getMessage(), PHP_EOL;
 }
@@ -287,7 +287,7 @@ $imPushRequest = new \TencentCloud\IM\Model\ImPushRequest(); // \TencentCloud\IM
 
 try {
     $result = $apiInstance->imPush($random, $imPushRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imPush: ', $e->getMessage(), PHP_EOL;
 }
@@ -347,7 +347,7 @@ $imRemoveAllTagRequest = new \TencentCloud\IM\Model\ImRemoveAllTagRequest(); // 
 
 try {
     $result = $apiInstance->imRemoveAllTags($random, $imRemoveAllTagRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imRemoveAllTags: ', $e->getMessage(), PHP_EOL;
 }
@@ -407,7 +407,7 @@ $imRemoveAttrRequest = new \TencentCloud\IM\Model\ImRemoveAttrRequest(); // \Ten
 
 try {
     $result = $apiInstance->imRemoveAttr($random, $imRemoveAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imRemoveAttr: ', $e->getMessage(), PHP_EOL;
 }
@@ -467,7 +467,7 @@ $imRemoveTagRequest = new \TencentCloud\IM\Model\ImRemoveTagRequest(); // \Tence
 
 try {
     $result = $apiInstance->imRemoveTag($random, $imRemoveTagRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imRemoveTag: ', $e->getMessage(), PHP_EOL;
 }
@@ -527,7 +527,7 @@ $imSetAttrRequest = new \TencentCloud\IM\Model\ImSetAttrRequest(); // \TencentCl
 
 try {
     $result = $apiInstance->imSetAttr($random, $imSetAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imSetAttr: ', $e->getMessage(), PHP_EOL;
 }
@@ -587,7 +587,7 @@ $imSetAttrNameRequest = new \TencentCloud\IM\Model\ImSetAttrNameRequest(); // \T
 
 try {
     $result = $apiInstance->imSetAttrName($random, $imSetAttrNameRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllMemberPushApi->imSetAttrName: ', $e->getMessage(), PHP_EOL;
 }

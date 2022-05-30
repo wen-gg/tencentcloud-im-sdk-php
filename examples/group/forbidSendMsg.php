@@ -22,7 +22,7 @@ $forbidSendMsgRequest->setShutUpTime(0);
 
 try {
     $result = $apiInstance->forbidSendMsg($random, $forbidSendMsgRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->forbidSendMsg: ', $e->getMessage(), PHP_EOL;
 }

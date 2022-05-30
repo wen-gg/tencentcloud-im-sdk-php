@@ -21,7 +21,7 @@ $getRecentContactListGroupDeleteRequest->setType(1);
 
 try {
     $result = $apiInstance->deleteRecentContact($random, $getRecentContactListGroupDeleteRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecentContactApi->deleteRecentContact: ', $e->getMessage(), PHP_EOL;
 }

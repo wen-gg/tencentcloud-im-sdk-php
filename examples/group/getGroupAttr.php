@@ -20,7 +20,7 @@ $getGroupAttrRequest->setGroupId("");
 
 try {
     $result = $apiInstance->getGroupAttr($random, $getGroupAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getGroupAttr: ', $e->getMessage(), PHP_EOL;
 }

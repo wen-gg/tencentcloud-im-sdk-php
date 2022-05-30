@@ -21,7 +21,7 @@ $groupMsgGetSimpleRequest->setReqMsgNumber(2);
 
 try {
     $result = $apiInstance->groupMsgGetSimple($random, $groupMsgGetSimpleRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->groupMsgGetSimple: ', $e->getMessage(), PHP_EOL;
 }

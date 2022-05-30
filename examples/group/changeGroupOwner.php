@@ -21,7 +21,7 @@ $changeGroupOwnerRequest->setNewOwnerAccount("");
 
 try {
     $result = $apiInstance->changeGroupOwner($random, $changeGroupOwnerRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->changeGroupOwner: ', $e->getMessage(), PHP_EOL;
 }

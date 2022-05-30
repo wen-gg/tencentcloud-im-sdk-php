@@ -65,7 +65,7 @@ $addGroupMemberRequest = new \TencentCloud\IM\Model\AddGroupMemberRequest(); // 
 
 try {
     $result = $apiInstance->addGroupMember($random, $addGroupMemberRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->addGroupMember: ', $e->getMessage(), PHP_EOL;
 }
@@ -125,7 +125,7 @@ $changeGroupOwnerRequest = new \TencentCloud\IM\Model\ChangeGroupOwnerRequest();
 
 try {
     $result = $apiInstance->changeGroupOwner($random, $changeGroupOwnerRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->changeGroupOwner: ', $e->getMessage(), PHP_EOL;
 }
@@ -185,7 +185,7 @@ $clearGroupAttrRequest = new \TencentCloud\IM\Model\ClearGroupAttrRequest(); // 
 
 try {
     $result = $apiInstance->clearGroupAttr($random, $clearGroupAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->clearGroupAttr: ', $e->getMessage(), PHP_EOL;
 }
@@ -245,7 +245,7 @@ $createGroupRequest = new \TencentCloud\IM\Model\CreateGroupRequest(); // \Tence
 
 try {
     $result = $apiInstance->createGroup($random, $createGroupRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->createGroup: ', $e->getMessage(), PHP_EOL;
 }
@@ -305,7 +305,7 @@ $deleteGroupMemberRequest = new \TencentCloud\IM\Model\DeleteGroupMemberRequest(
 
 try {
     $result = $apiInstance->deleteGroupMember($random, $deleteGroupMemberRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->deleteGroupMember: ', $e->getMessage(), PHP_EOL;
 }
@@ -365,7 +365,7 @@ $deleteGroupMsgBySenderRequest = new \TencentCloud\IM\Model\DeleteGroupMsgBySend
 
 try {
     $result = $apiInstance->deleteGroupMsgBySender($random, $deleteGroupMsgBySenderRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->deleteGroupMsgBySender: ', $e->getMessage(), PHP_EOL;
 }
@@ -425,7 +425,7 @@ $destroyGroupRequest = new \TencentCloud\IM\Model\DestroyGroupRequest(); // \Ten
 
 try {
     $result = $apiInstance->destroyGroup($random, $destroyGroupRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->destroyGroup: ', $e->getMessage(), PHP_EOL;
 }
@@ -485,7 +485,7 @@ $forbidSendMsgRequest = new \TencentCloud\IM\Model\ForbidSendMsgRequest(); // \T
 
 try {
     $result = $apiInstance->forbidSendMsg($random, $forbidSendMsgRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->forbidSendMsg: ', $e->getMessage(), PHP_EOL;
 }
@@ -545,7 +545,7 @@ $getAppidGroupListRequest = new \TencentCloud\IM\Model\GetAppidGroupListRequest(
 
 try {
     $result = $apiInstance->getAppidGroupList($random, $getAppidGroupListRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getAppidGroupList: ', $e->getMessage(), PHP_EOL;
 }
@@ -605,7 +605,7 @@ $getGroupAttrRequest = new \TencentCloud\IM\Model\GetGroupAttrRequest(); // \Ten
 
 try {
     $result = $apiInstance->getGroupAttr($random, $getGroupAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getGroupAttr: ', $e->getMessage(), PHP_EOL;
 }
@@ -665,7 +665,7 @@ $getGroupInfoRequest = new \TencentCloud\IM\Model\GetGroupInfoRequest(); // \Ten
 
 try {
     $result = $apiInstance->getGroupInfo($random, $getGroupInfoRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getGroupInfo: ', $e->getMessage(), PHP_EOL;
 }
@@ -725,7 +725,7 @@ $getGroupMemberInfoRequest = new \TencentCloud\IM\Model\GetGroupMemberInfoReques
 
 try {
     $result = $apiInstance->getGroupMemberInfo($random, $getGroupMemberInfoRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getGroupMemberInfo: ', $e->getMessage(), PHP_EOL;
 }
@@ -785,7 +785,7 @@ $getGroupShuttedUinRequest = new \TencentCloud\IM\Model\GetGroupShuttedUinReques
 
 try {
     $result = $apiInstance->getGroupShuttedUin($random, $getGroupShuttedUinRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getGroupShuttedUin: ', $e->getMessage(), PHP_EOL;
 }
@@ -845,7 +845,7 @@ $getJoinedGroupListRequest = new \TencentCloud\IM\Model\GetJoinedGroupListReques
 
 try {
     $result = $apiInstance->getJoinedGroupList($random, $getJoinedGroupListRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getJoinedGroupList: ', $e->getMessage(), PHP_EOL;
 }
@@ -905,7 +905,7 @@ $getOnlineMemberNumRequest = new \TencentCloud\IM\Model\GetOnlineMemberNumReques
 
 try {
     $result = $apiInstance->getOnlineMemberNum($random, $getOnlineMemberNumRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getOnlineMemberNum: ', $e->getMessage(), PHP_EOL;
 }
@@ -965,7 +965,7 @@ $getRoleInGroupRequest = new \TencentCloud\IM\Model\GetRoleInGroupRequest(); // 
 
 try {
     $result = $apiInstance->getRoleInGroup($random, $getRoleInGroupRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getRoleInGroup: ', $e->getMessage(), PHP_EOL;
 }
@@ -1025,7 +1025,7 @@ $groupMsgGetSimpleRequest = new \TencentCloud\IM\Model\GroupMsgGetSimpleRequest(
 
 try {
     $result = $apiInstance->groupMsgGetSimple($random, $groupMsgGetSimpleRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->groupMsgGetSimple: ', $e->getMessage(), PHP_EOL;
 }
@@ -1085,7 +1085,7 @@ $groupMsgRecallRequest = new \TencentCloud\IM\Model\GroupMsgRecallRequest(); // 
 
 try {
     $result = $apiInstance->groupMsgRecall($random, $groupMsgRecallRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->groupMsgRecall: ', $e->getMessage(), PHP_EOL;
 }
@@ -1145,7 +1145,7 @@ $importGroupRequest = new \TencentCloud\IM\Model\ImportGroupRequest(); // \Tence
 
 try {
     $result = $apiInstance->importGroup($random, $importGroupRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->importGroup: ', $e->getMessage(), PHP_EOL;
 }
@@ -1205,7 +1205,7 @@ $importGroupMemberRequest = new \TencentCloud\IM\Model\ImportGroupMemberRequest(
 
 try {
     $result = $apiInstance->importGroupMember($random, $importGroupMemberRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->importGroupMember: ', $e->getMessage(), PHP_EOL;
 }
@@ -1265,7 +1265,7 @@ $importGroupMsgRequest = new \TencentCloud\IM\Model\ImportGroupMsgRequest(); // 
 
 try {
     $result = $apiInstance->importGroupMsg($random, $importGroupMsgRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->importGroupMsg: ', $e->getMessage(), PHP_EOL;
 }
@@ -1325,7 +1325,7 @@ $modifyGroupAttrRequest = new \TencentCloud\IM\Model\ModifyGroupAttrRequest(); /
 
 try {
     $result = $apiInstance->modifyGroupAttr($random, $modifyGroupAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->modifyGroupAttr: ', $e->getMessage(), PHP_EOL;
 }
@@ -1385,7 +1385,7 @@ $modifyGroupBaseInfoRequest = new \TencentCloud\IM\Model\ModifyGroupBaseInfoRequ
 
 try {
     $result = $apiInstance->modifyGroupBaseInfo($random, $modifyGroupBaseInfoRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->modifyGroupBaseInfo: ', $e->getMessage(), PHP_EOL;
 }
@@ -1445,7 +1445,7 @@ $modifyGroupMemberInfoRequest = new \TencentCloud\IM\Model\ModifyGroupMemberInfo
 
 try {
     $result = $apiInstance->modifyGroupMemberInfo($random, $modifyGroupMemberInfoRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->modifyGroupMemberInfo: ', $e->getMessage(), PHP_EOL;
 }
@@ -1505,7 +1505,7 @@ $sendGroupMsgRequest = new \TencentCloud\IM\Model\SendGroupMsgRequest(); // \Ten
 
 try {
     $result = $apiInstance->sendGroupMsg($random, $sendGroupMsgRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->sendGroupMsg: ', $e->getMessage(), PHP_EOL;
 }
@@ -1565,7 +1565,7 @@ $sendGroupSystemNotificationRequest = new \TencentCloud\IM\Model\SendGroupSystem
 
 try {
     $result = $apiInstance->sendGroupSystemNotification($random, $sendGroupSystemNotificationRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->sendGroupSystemNotification: ', $e->getMessage(), PHP_EOL;
 }
@@ -1625,7 +1625,7 @@ $setGroupAttrRequest = new \TencentCloud\IM\Model\SetGroupAttrRequest(); // \Ten
 
 try {
     $result = $apiInstance->setGroupAttr($random, $setGroupAttrRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->setGroupAttr: ', $e->getMessage(), PHP_EOL;
 }
@@ -1685,7 +1685,7 @@ $setUnreadMsgNumRequest = new \TencentCloud\IM\Model\SetUnreadMsgNumRequest(); /
 
 try {
     $result = $apiInstance->setUnreadMsgNum($random, $setUnreadMsgNumRequest);
-    echo $result;
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->setUnreadMsgNum: ', $e->getMessage(), PHP_EOL;
 }
