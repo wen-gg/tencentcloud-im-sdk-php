@@ -1,6 +1,6 @@
 <?php
 /**
- * ImportGroupMsgRequest
+ * ImRemoveTagRequestUserTags
  *
  * PHP version 5
  *
@@ -28,13 +28,13 @@ use \ArrayAccess;
 use \TencentCloud\IM\ObjectSerializer;
 
 /**
- * ImportGroupMsgRequest Class Doc Comment
+ * ImRemoveTagRequestUserTags Class Doc Comment
  *
  * @category Class
  * @package  TencentCloud\IM
 
  */
-class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
+class ImRemoveTagRequestUserTags implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -43,7 +43,7 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ImportGroupMsgRequest';
+    protected static $openAPIModelName = 'ImRemoveTagRequest_UserTags';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -51,9 +51,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'groupId' => 'string',
-        'recentContactFlag' => 'int',
-        'msgList' => '\TencentCloud\IM\Model\ImportGroupMsgRequestMsgList[]'
+        'toAccount' => 'string',
+        'tags' => 'string[]'
     ];
 
     /**
@@ -62,9 +61,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'groupId' => null,
-        'recentContactFlag' => 'int32',
-        'msgList' => null
+        'toAccount' => null,
+        'tags' => null
     ];
 
     /**
@@ -94,9 +92,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'groupId' => 'GroupId',
-        'recentContactFlag' => 'RecentContactFlag',
-        'msgList' => 'MsgList'
+        'toAccount' => 'To_Account',
+        'tags' => 'Tags'
     ];
 
     /**
@@ -105,9 +102,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'groupId' => 'setGroupId',
-        'recentContactFlag' => 'setRecentContactFlag',
-        'msgList' => 'setMsgList'
+        'toAccount' => 'setToAccount',
+        'tags' => 'setTags'
     ];
 
     /**
@@ -116,9 +112,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'groupId' => 'getGroupId',
-        'recentContactFlag' => 'getRecentContactFlag',
-        'msgList' => 'getMsgList'
+        'toAccount' => 'getToAccount',
+        'tags' => 'getTags'
     ];
 
     /**
@@ -181,9 +176,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
-        $this->container['recentContactFlag'] = isset($data['recentContactFlag']) ? $data['recentContactFlag'] : null;
-        $this->container['msgList'] = isset($data['msgList']) ? $data['msgList'] : null;
+        $this->container['toAccount'] = isset($data['toAccount']) ? $data['toAccount'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -195,12 +189,6 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['groupId'] === null) {
-            $invalidProperties[] = "'groupId' can't be null";
-        }
-        if ($this->container['msgList'] === null) {
-            $invalidProperties[] = "'msgList' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,73 +205,49 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets groupId
+     * Gets toAccount
      *
-     * @return string
+     * @return string|null
      */
-    public function getGroupId()
+    public function getToAccount()
     {
-        return $this->container['groupId'];
+        return $this->container['toAccount'];
     }
 
     /**
-     * Sets groupId
+     * Sets toAccount
      *
-     * @param string $groupId 要导入消息的群 ID
+     * @param string|null $toAccount 目标用户帐号列表
      *
      * @return $this
      */
-    public function setGroupId($groupId)
+    public function setToAccount($toAccount)
     {
-        $this->container['groupId'] = $groupId;
+        $this->container['toAccount'] = $toAccount;
 
         return $this;
     }
 
     /**
-     * Gets recentContactFlag
+     * Gets tags
      *
-     * @return int|null
+     * @return string[]|null
      */
-    public function getRecentContactFlag()
+    public function getTags()
     {
-        return $this->container['recentContactFlag'];
+        return $this->container['tags'];
     }
 
     /**
-     * Sets recentContactFlag
+     * Sets tags
      *
-     * @param int|null $recentContactFlag 会话更新识别，为1的时候标识触发会话更新，默认不触发（avchatroom 群不支持）。
+     * @param string[]|null $tags 标签集合
      *
      * @return $this
      */
-    public function setRecentContactFlag($recentContactFlag)
+    public function setTags($tags)
     {
-        $this->container['recentContactFlag'] = $recentContactFlag;
-
-        return $this;
-    }
-
-    /**
-     * Gets msgList
-     *
-     * @return \TencentCloud\IM\Model\ImportGroupMsgRequestMsgList[]
-     */
-    public function getMsgList()
-    {
-        return $this->container['msgList'];
-    }
-
-    /**
-     * Sets msgList
-     *
-     * @param \TencentCloud\IM\Model\ImportGroupMsgRequestMsgList[] $msgList 导入的消息列表
-     *
-     * @return $this
-     */
-    public function setMsgList($msgList)
-    {
-        $this->container['msgList'] = $msgList;
+        $this->container['tags'] = $tags;
 
         return $this;
     }

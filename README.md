@@ -20,7 +20,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "tencentcloud/tencentcloud-im-sdk-php": "^1.0.2"
+    "tencentcloud/tencentcloud-im-sdk-php": "^1.0.3"
   }
 }
 ```
@@ -276,6 +276,7 @@ Class | Method | HTTP request | Description
  - [ImRemoveAllTagRequest](docs/Model/ImRemoveAllTagRequest.md)
  - [ImRemoveAttrRequest](docs/Model/ImRemoveAttrRequest.md)
  - [ImRemoveTagRequest](docs/Model/ImRemoveTagRequest.md)
+ - [ImRemoveTagRequestUserTags](docs/Model/ImRemoveTagRequestUserTags.md)
  - [ImSetAttrNameRequest](docs/Model/ImSetAttrNameRequest.md)
  - [ImSetAttrRequest](docs/Model/ImSetAttrRequest.md)
  - [ImSetAttrRequestUserAttrs](docs/Model/ImSetAttrRequestUserAttrs.md)
@@ -284,6 +285,7 @@ Class | Method | HTTP request | Description
  - [ImportGroupMemberRequestMemberList](docs/Model/ImportGroupMemberRequestMemberList.md)
  - [ImportGroupMemberResponse](docs/Model/ImportGroupMemberResponse.md)
  - [ImportGroupMsgRequest](docs/Model/ImportGroupMsgRequest.md)
+ - [ImportGroupMsgRequestMsgList](docs/Model/ImportGroupMsgRequestMsgList.md)
  - [ImportGroupMsgResponse](docs/Model/ImportGroupMsgResponse.md)
  - [ImportGroupRequest](docs/Model/ImportGroupRequest.md)
  - [ImportGroupResponse](docs/Model/ImportGroupResponse.md)

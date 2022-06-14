@@ -1,6 +1,6 @@
 <?php
 /**
- * ImportGroupMsgRequest
+ * ImportGroupMsgRequestMsgList
  *
  * PHP version 5
  *
@@ -28,13 +28,13 @@ use \ArrayAccess;
 use \TencentCloud\IM\ObjectSerializer;
 
 /**
- * ImportGroupMsgRequest Class Doc Comment
+ * ImportGroupMsgRequestMsgList Class Doc Comment
  *
  * @category Class
  * @package  TencentCloud\IM
 
  */
-class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
+class ImportGroupMsgRequestMsgList implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -43,7 +43,7 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ImportGroupMsgRequest';
+    protected static $openAPIModelName = 'ImportGroupMsgRequest_MsgList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -51,9 +51,10 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'groupId' => 'string',
-        'recentContactFlag' => 'int',
-        'msgList' => '\TencentCloud\IM\Model\ImportGroupMsgRequestMsgList[]'
+        'fromAccount' => 'string',
+        'sendTime' => 'int',
+        'random' => 'int',
+        'msgBody' => '\TencentCloud\IM\Model\TIMMsgElement[]'
     ];
 
     /**
@@ -62,9 +63,10 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'groupId' => null,
-        'recentContactFlag' => 'int32',
-        'msgList' => null
+        'fromAccount' => null,
+        'sendTime' => 'int32',
+        'random' => 'int32',
+        'msgBody' => null
     ];
 
     /**
@@ -94,9 +96,10 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'groupId' => 'GroupId',
-        'recentContactFlag' => 'RecentContactFlag',
-        'msgList' => 'MsgList'
+        'fromAccount' => 'From_Account',
+        'sendTime' => 'SendTime',
+        'random' => 'Random',
+        'msgBody' => 'MsgBody'
     ];
 
     /**
@@ -105,9 +108,10 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'groupId' => 'setGroupId',
-        'recentContactFlag' => 'setRecentContactFlag',
-        'msgList' => 'setMsgList'
+        'fromAccount' => 'setFromAccount',
+        'sendTime' => 'setSendTime',
+        'random' => 'setRandom',
+        'msgBody' => 'setMsgBody'
     ];
 
     /**
@@ -116,9 +120,10 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'groupId' => 'getGroupId',
-        'recentContactFlag' => 'getRecentContactFlag',
-        'msgList' => 'getMsgList'
+        'fromAccount' => 'getFromAccount',
+        'sendTime' => 'getSendTime',
+        'random' => 'getRandom',
+        'msgBody' => 'getMsgBody'
     ];
 
     /**
@@ -181,9 +186,10 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
-        $this->container['recentContactFlag'] = isset($data['recentContactFlag']) ? $data['recentContactFlag'] : null;
-        $this->container['msgList'] = isset($data['msgList']) ? $data['msgList'] : null;
+        $this->container['fromAccount'] = isset($data['fromAccount']) ? $data['fromAccount'] : null;
+        $this->container['sendTime'] = isset($data['sendTime']) ? $data['sendTime'] : null;
+        $this->container['random'] = isset($data['random']) ? $data['random'] : null;
+        $this->container['msgBody'] = isset($data['msgBody']) ? $data['msgBody'] : null;
     }
 
     /**
@@ -195,12 +201,6 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['groupId'] === null) {
-            $invalidProperties[] = "'groupId' can't be null";
-        }
-        if ($this->container['msgList'] === null) {
-            $invalidProperties[] = "'msgList' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,73 +217,97 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets groupId
+     * Gets fromAccount
      *
-     * @return string
+     * @return string|null
      */
-    public function getGroupId()
+    public function getFromAccount()
     {
-        return $this->container['groupId'];
+        return $this->container['fromAccount'];
     }
 
     /**
-     * Sets groupId
+     * Sets fromAccount
      *
-     * @param string $groupId 要导入消息的群 ID
+     * @param string|null $fromAccount 指定消息发送者
      *
      * @return $this
      */
-    public function setGroupId($groupId)
+    public function setFromAccount($fromAccount)
     {
-        $this->container['groupId'] = $groupId;
+        $this->container['fromAccount'] = $fromAccount;
 
         return $this;
     }
 
     /**
-     * Gets recentContactFlag
+     * Gets sendTime
      *
      * @return int|null
      */
-    public function getRecentContactFlag()
+    public function getSendTime()
     {
-        return $this->container['recentContactFlag'];
+        return $this->container['sendTime'];
     }
 
     /**
-     * Sets recentContactFlag
+     * Sets sendTime
      *
-     * @param int|null $recentContactFlag 会话更新识别，为1的时候标识触发会话更新，默认不触发（avchatroom 群不支持）。
+     * @param int|null $sendTime 消息发送时间
      *
      * @return $this
      */
-    public function setRecentContactFlag($recentContactFlag)
+    public function setSendTime($sendTime)
     {
-        $this->container['recentContactFlag'] = $recentContactFlag;
+        $this->container['sendTime'] = $sendTime;
 
         return $this;
     }
 
     /**
-     * Gets msgList
+     * Gets random
      *
-     * @return \TencentCloud\IM\Model\ImportGroupMsgRequestMsgList[]
+     * @return int|null
      */
-    public function getMsgList()
+    public function getRandom()
     {
-        return $this->container['msgList'];
+        return $this->container['random'];
     }
 
     /**
-     * Sets msgList
+     * Sets random
      *
-     * @param \TencentCloud\IM\Model\ImportGroupMsgRequestMsgList[] $msgList 导入的消息列表
+     * @param int|null $random 32位无符号整数；如果5分钟内两条消息的随机值相同，后一条消息将被当做重复消息而丢弃
      *
      * @return $this
      */
-    public function setMsgList($msgList)
+    public function setRandom($random)
     {
-        $this->container['msgList'] = $msgList;
+        $this->container['random'] = $random;
+
+        return $this;
+    }
+
+    /**
+     * Gets msgBody
+     *
+     * @return \TencentCloud\IM\Model\TIMMsgElement[]|null
+     */
+    public function getMsgBody()
+    {
+        return $this->container['msgBody'];
+    }
+
+    /**
+     * Sets msgBody
+     *
+     * @param \TencentCloud\IM\Model\TIMMsgElement[]|null $msgBody msgBody
+     *
+     * @return $this
+     */
+    public function setMsgBody($msgBody)
+    {
+        $this->container['msgBody'] = $msgBody;
 
         return $this;
     }

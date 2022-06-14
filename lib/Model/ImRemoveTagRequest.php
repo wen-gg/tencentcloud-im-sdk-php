@@ -51,7 +51,7 @@ class ImRemoveTagRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'userTags' => 'string[]'
+        'userTags' => '\TencentCloud\IM\Model\ImRemoveTagRequestUserTags[]'
     ];
 
     /**
@@ -183,6 +183,9 @@ class ImRemoveTagRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['userTags'] === null) {
+            $invalidProperties[] = "'userTags' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -201,7 +204,7 @@ class ImRemoveTagRequest implements ModelInterface, ArrayAccess
     /**
      * Gets userTags
      *
-     * @return string[]|null
+     * @return \TencentCloud\IM\Model\ImRemoveTagRequestUserTags[]
      */
     public function getUserTags()
     {
@@ -211,7 +214,7 @@ class ImRemoveTagRequest implements ModelInterface, ArrayAccess
     /**
      * Sets userTags
      *
-     * @param string[]|null $userTags 目标用户帐号列表
+     * @param \TencentCloud\IM\Model\ImRemoveTagRequestUserTags[] $userTags 目标用户帐号列表
      *
      * @return $this
      */

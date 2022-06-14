@@ -16,7 +16,8 @@ $apiInstance = new TencentCloud\IM\Api\AllMemberPushApi(
 $random = 56; // int |
 $imRemoveTagRequest = new \TencentCloud\IM\Model\ImRemoveTagRequest(); // \TencentCloud\IM\Model\ImRemoveTagRequest |
 //TODO: Set the request parameters
-$imRemoveTagRequest->setUserTags(array(""));
+
+$imRemoveTagRequest->setUserTags([]);
 
 try {
     $result = $apiInstance->imRemoveTag($random, $imRemoveTagRequest);

@@ -18,7 +18,7 @@ $importGroupMsgRequest = new \TencentCloud\IM\Model\ImportGroupMsgRequest(); // 
 //TODO: Set the request parameters
 $importGroupMsgRequest->setGroupId("");
 $importGroupMsgRequest->setRecentContactFlag(1);
-$importGroupMsgRequest->setMsgList(array(0 => array("From_Account" => "", "SendTime" => 1653389855, "MsgBody" => array(0 => array("MsgType" => "TIMFaceElem", "MsgContent" => array("Text" => ""))))));
+$importGroupMsgRequest->setMsgList([]);
 
 try {
     $result = $apiInstance->importGroupMsg($random, $importGroupMsgRequest);
