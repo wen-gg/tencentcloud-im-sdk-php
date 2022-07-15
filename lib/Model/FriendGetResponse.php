@@ -49,9 +49,13 @@ class FriendGetResponse extends CommonResponse
       * @var string[]
       */
     protected static $openAPITypes = [
-        'resultItem' => 'object[]',
-        'failAccount' => 'string[]',
-        'errorDisplay' => 'int'
+        'userDataItem' => 'object[]',
+        'standardSequence' => 'int',
+        'customSequence' => 'int',
+        'friendNum' => 'int',
+        'completeFlag' => 'int',
+        'nextStartIndex' => 'int',
+        'errorDisplay' => 'string'
     ];
 
     /**
@@ -60,9 +64,13 @@ class FriendGetResponse extends CommonResponse
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'resultItem' => null,
-        'failAccount' => null,
-        'errorDisplay' => 'int32'
+        'userDataItem' => null,
+        'standardSequence' => 'int32',
+        'customSequence' => 'int32',
+        'friendNum' => 'int32',
+        'completeFlag' => 'int32',
+        'nextStartIndex' => 'int32',
+        'errorDisplay' => null
     ];
 
     /**
@@ -92,8 +100,12 @@ class FriendGetResponse extends CommonResponse
      * @var string[]
      */
     protected static $attributeMap = [
-        'resultItem' => 'ResultItem',
-        'failAccount' => 'Fail_Account',
+        'userDataItem' => 'UserDataItem',
+        'standardSequence' => 'StandardSequence',
+        'customSequence' => 'CustomSequence',
+        'friendNum' => 'FriendNum',
+        'completeFlag' => 'CompleteFlag',
+        'nextStartIndex' => 'NextStartIndex',
         'errorDisplay' => 'ErrorDisplay'
     ];
 
@@ -103,8 +115,12 @@ class FriendGetResponse extends CommonResponse
      * @var string[]
      */
     protected static $setters = [
-        'resultItem' => 'setResultItem',
-        'failAccount' => 'setFailAccount',
+        'userDataItem' => 'setUserDataItem',
+        'standardSequence' => 'setStandardSequence',
+        'customSequence' => 'setCustomSequence',
+        'friendNum' => 'setFriendNum',
+        'completeFlag' => 'setCompleteFlag',
+        'nextStartIndex' => 'setNextStartIndex',
         'errorDisplay' => 'setErrorDisplay'
     ];
 
@@ -114,8 +130,12 @@ class FriendGetResponse extends CommonResponse
      * @var string[]
      */
     protected static $getters = [
-        'resultItem' => 'getResultItem',
-        'failAccount' => 'getFailAccount',
+        'userDataItem' => 'getUserDataItem',
+        'standardSequence' => 'getStandardSequence',
+        'customSequence' => 'getCustomSequence',
+        'friendNum' => 'getFriendNum',
+        'completeFlag' => 'getCompleteFlag',
+        'nextStartIndex' => 'getNextStartIndex',
         'errorDisplay' => 'getErrorDisplay'
     ];
 
@@ -175,8 +195,12 @@ class FriendGetResponse extends CommonResponse
     {
         parent::__construct($data);
 
-        $this->container['resultItem'] = isset($data['resultItem']) ? $data['resultItem'] : null;
-        $this->container['failAccount'] = isset($data['failAccount']) ? $data['failAccount'] : null;
+        $this->container['userDataItem'] = isset($data['userDataItem']) ? $data['userDataItem'] : null;
+        $this->container['standardSequence'] = isset($data['standardSequence']) ? $data['standardSequence'] : null;
+        $this->container['customSequence'] = isset($data['customSequence']) ? $data['customSequence'] : null;
+        $this->container['friendNum'] = isset($data['friendNum']) ? $data['friendNum'] : null;
+        $this->container['completeFlag'] = isset($data['completeFlag']) ? $data['completeFlag'] : null;
+        $this->container['nextStartIndex'] = isset($data['nextStartIndex']) ? $data['nextStartIndex'] : null;
         $this->container['errorDisplay'] = isset($data['errorDisplay']) ? $data['errorDisplay'] : null;
     }
 
@@ -205,49 +229,145 @@ class FriendGetResponse extends CommonResponse
 
 
     /**
-     * Gets resultItem
+     * Gets userDataItem
      *
      * @return object[]|null
      */
-    public function getResultItem()
+    public function getUserDataItem()
     {
-        return $this->container['resultItem'];
+        return $this->container['userDataItem'];
     }
 
     /**
-     * Sets resultItem
+     * Sets userDataItem
      *
-     * @param object[]|null $resultItem resultItem
+     * @param object[]|null $userDataItem userDataItem
      *
      * @return $this
      */
-    public function setResultItem($resultItem)
+    public function setUserDataItem($userDataItem)
     {
-        $this->container['resultItem'] = $resultItem;
+        $this->container['userDataItem'] = $userDataItem;
 
         return $this;
     }
 
     /**
-     * Gets failAccount
+     * Gets standardSequence
      *
-     * @return string[]|null
+     * @return int|null
      */
-    public function getFailAccount()
+    public function getStandardSequence()
     {
-        return $this->container['failAccount'];
+        return $this->container['standardSequence'];
     }
 
     /**
-     * Sets failAccount
+     * Sets standardSequence
      *
-     * @param string[]|null $failAccount 返回处理失败的用户列表，仅当存在失败用户时才返回该字段
+     * @param int|null $standardSequence 标配好友数据的 Sequence，客户端可以保存该 Sequence，下次请求时通过请求的 StandardSequence 字段返回给后台
      *
      * @return $this
      */
-    public function setFailAccount($failAccount)
+    public function setStandardSequence($standardSequence)
     {
-        $this->container['failAccount'] = $failAccount;
+        $this->container['standardSequence'] = $standardSequence;
+
+        return $this;
+    }
+
+    /**
+     * Gets customSequence
+     *
+     * @return int|null
+     */
+    public function getCustomSequence()
+    {
+        return $this->container['customSequence'];
+    }
+
+    /**
+     * Sets customSequence
+     *
+     * @param int|null $customSequence 自定义好友数据的 Sequence，客户端可以保存该 Sequence，下次请求时通过请求的 CustomSequence 字段返回给后台
+     *
+     * @return $this
+     */
+    public function setCustomSequence($customSequence)
+    {
+        $this->container['customSequence'] = $customSequence;
+
+        return $this;
+    }
+
+    /**
+     * Gets friendNum
+     *
+     * @return int|null
+     */
+    public function getFriendNum()
+    {
+        return $this->container['friendNum'];
+    }
+
+    /**
+     * Sets friendNum
+     *
+     * @param int|null $friendNum 好友总数
+     *
+     * @return $this
+     */
+    public function setFriendNum($friendNum)
+    {
+        $this->container['friendNum'] = $friendNum;
+
+        return $this;
+    }
+
+    /**
+     * Gets completeFlag
+     *
+     * @return int|null
+     */
+    public function getCompleteFlag()
+    {
+        return $this->container['completeFlag'];
+    }
+
+    /**
+     * Sets completeFlag
+     *
+     * @param int|null $completeFlag 分页的结束标识，非0值表示已完成全量拉取
+     *
+     * @return $this
+     */
+    public function setCompleteFlag($completeFlag)
+    {
+        $this->container['completeFlag'] = $completeFlag;
+
+        return $this;
+    }
+
+    /**
+     * Gets nextStartIndex
+     *
+     * @return int|null
+     */
+    public function getNextStartIndex()
+    {
+        return $this->container['nextStartIndex'];
+    }
+
+    /**
+     * Sets nextStartIndex
+     *
+     * @param int|null $nextStartIndex 分页接口下一页的起始位置
+     *
+     * @return $this
+     */
+    public function setNextStartIndex($nextStartIndex)
+    {
+        $this->container['nextStartIndex'] = $nextStartIndex;
 
         return $this;
     }
@@ -255,7 +375,7 @@ class FriendGetResponse extends CommonResponse
     /**
      * Gets errorDisplay
      *
-     * @return int|null
+     * @return string|null
      */
     public function getErrorDisplay()
     {
@@ -265,7 +385,7 @@ class FriendGetResponse extends CommonResponse
     /**
      * Sets errorDisplay
      *
-     * @param int|null $errorDisplay 详细的客户端展示信息
+     * @param string|null $errorDisplay 详细的客户端展示信息
      *
      * @return $this
      */

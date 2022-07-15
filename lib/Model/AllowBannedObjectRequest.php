@@ -1,6 +1,6 @@
 <?php
 /**
- * CommonResponse
+ * AllowBannedObjectRequest
  *
  * PHP version 5
  *
@@ -28,13 +28,13 @@ use \ArrayAccess;
 use \TencentCloud\IM\ObjectSerializer;
 
 /**
- * CommonResponse Class Doc Comment
+ * AllowBannedObjectRequest Class Doc Comment
  *
  * @category Class
  * @package  TencentCloud\IM
 
  */
-class CommonResponse implements ModelInterface, ArrayAccess
+class AllowBannedObjectRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -43,7 +43,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'CommonResponse';
+    protected static $openAPIModelName = 'AllowBannedObjectRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -51,9 +51,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'actionStatus' => 'string',
-        'errorInfo' => 'string',
-        'errorCode' => 'int'
+        'rawURL' => 'string'
     ];
 
     /**
@@ -62,9 +60,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'actionStatus' => null,
-        'errorInfo' => null,
-        'errorCode' => 'int32'
+        'rawURL' => null
     ];
 
     /**
@@ -94,9 +90,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'actionStatus' => 'ActionStatus',
-        'errorInfo' => 'ErrorInfo',
-        'errorCode' => 'ErrorCode'
+        'rawURL' => 'RawURL'
     ];
 
     /**
@@ -105,9 +99,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'actionStatus' => 'setActionStatus',
-        'errorInfo' => 'setErrorInfo',
-        'errorCode' => 'setErrorCode'
+        'rawURL' => 'setRawURL'
     ];
 
     /**
@@ -116,9 +108,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'actionStatus' => 'getActionStatus',
-        'errorInfo' => 'getErrorInfo',
-        'errorCode' => 'getErrorCode'
+        'rawURL' => 'getRawURL'
     ];
 
     /**
@@ -181,9 +171,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['actionStatus'] = isset($data['actionStatus']) ? $data['actionStatus'] : null;
-        $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['rawURL'] = isset($data['rawURL']) ? $data['rawURL'] : null;
     }
 
     /**
@@ -195,8 +183,8 @@ class CommonResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['errorCode'] === null) {
-            $invalidProperties[] = "'errorCode' can't be null";
+        if ($this->container['rawURL'] === null) {
+            $invalidProperties[] = "'rawURL' can't be null";
         }
         return $invalidProperties;
     }
@@ -214,73 +202,25 @@ class CommonResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets actionStatus
+     * Gets rawURL
      *
-     * @return string|null
+     * @return string
      */
-    public function getActionStatus()
+    public function getRawURL()
     {
-        return $this->container['actionStatus'];
+        return $this->container['rawURL'];
     }
 
     /**
-     * Sets actionStatus
+     * Sets rawURL
      *
-     * @param string|null $actionStatus 请求处理的结果，OK 表示处理成功，FAIL 表示失败
+     * @param string $rawURL 文件 URL，可从 IM 富媒体消息的 URL 字段获取
      *
      * @return $this
      */
-    public function setActionStatus($actionStatus)
+    public function setRawURL($rawURL)
     {
-        $this->container['actionStatus'] = $actionStatus;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorInfo
-     *
-     * @return string|null
-     */
-    public function getErrorInfo()
-    {
-        return $this->container['errorInfo'];
-    }
-
-    /**
-     * Sets errorInfo
-     *
-     * @param string|null $errorInfo 错误信息
-     *
-     * @return $this
-     */
-    public function setErrorInfo($errorInfo)
-    {
-        $this->container['errorInfo'] = $errorInfo;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorCode
-     *
-     * @return int
-     */
-    public function getErrorCode()
-    {
-        return $this->container['errorCode'];
-    }
-
-    /**
-     * Sets errorCode
-     *
-     * @param int $errorCode 错误码，0表示成功，非0表示失败
-     *
-     * @return $this
-     */
-    public function setErrorCode($errorCode)
-    {
-        $this->container['errorCode'] = $errorCode;
+        $this->container['rawURL'] = $rawURL;
 
         return $this;
     }

@@ -28,6 +28,7 @@ Method | HTTP request | Description
 [**modifyGroupAttr**](GroupApi.md#modifyGroupAttr) | **POST** /v4/group_open_http_svc/modify_group_attr | 修改群自定义属性（https://cloud.tencent.com/document/product/269/67010）
 [**modifyGroupBaseInfo**](GroupApi.md#modifyGroupBaseInfo) | **POST** /v4/group_open_http_svc/modify_group_base_info | 修改群基础资料（https://cloud.tencent.com/document/product/269/1620）
 [**modifyGroupMemberInfo**](GroupApi.md#modifyGroupMemberInfo) | **POST** /v4/group_open_http_svc/modify_group_member_info | 修改群成员资料(https://cloud.tencent.com/document/product/269/1623)
+[**modifyGroupMsg**](GroupApi.md#modifyGroupMsg) | **POST** /v4/openim/modify_group_msg | 修改群聊历史消息（https://cloud.tencent.com/document/product/269/74741）
 [**sendGroupMsg**](GroupApi.md#sendGroupMsg) | **POST** /v4/group_open_http_svc/send_group_msg | 在群组中发送普通消息（https://cloud.tencent.com/document/product/269/1629）
 [**sendGroupSystemNotification**](GroupApi.md#sendGroupSystemNotification) | **POST** /v4/group_open_http_svc/send_group_system_notification | 在群组中发送系统通知（https://cloud.tencent.com/document/product/269/1630）
 [**setGroupAttr**](GroupApi.md#setGroupAttr) | **POST** /v4/group_open_http_svc/set_group_attr | 重置群自定义属性（https://cloud.tencent.com/document/product/269/67011）
@@ -1458,6 +1459,66 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **random** | **int**|  |
  **modifyGroupMemberInfoRequest** | [**\TencentCloud\IM\Model\ModifyGroupMemberInfoRequest**](../Model/ModifyGroupMemberInfoRequest.md)|  | [optional]
+
+### Return type
+
+[**\TencentCloud\IM\Model\CommonResponse**](../Model/CommonResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **modifyGroupMsg**
+> \TencentCloud\IM\Model\CommonResponse modifyGroupMsg($random, $modifyGroupMsgRequest)
+
+修改群聊历史消息（https://cloud.tencent.com/document/product/269/74741）
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$config = new Configuration();
+//TODO: 此处替换成您的SDKAppID,应用 SDKAppID，可在即时通信 IM 控制台（https://console.cloud.tencent.com/im） 的应用卡片中获取。
+$config->setSdkappid(123456789);
+//TODO: 此处替换成您的identifier;用户名，调用 REST API时必须为App管理员帐号 参考:https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.91.98
+$config->setIdentifier("identifier");
+//TODO: 此处替换成您的key, 参考：https://cloud.tencent.com/document/product/269/32688#getkey
+$config->setKey("key");
+
+$apiInstance = new TencentCloud\IM\Api\GroupApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(), $config
+);
+$random = 56; // int | 
+$modifyGroupMsgRequest = new \TencentCloud\IM\Model\ModifyGroupMsgRequest(); // \TencentCloud\IM\Model\ModifyGroupMsgRequest | 
+ //TODO: Set the request parameters
+
+
+try {
+    $result = $apiInstance->modifyGroupMsg($random, $modifyGroupMsgRequest);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GroupApi->modifyGroupMsg: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **random** | **int**|  |
+ **modifyGroupMsgRequest** | [**\TencentCloud\IM\Model\ModifyGroupMsgRequest**](../Model/ModifyGroupMsgRequest.md)|  | [optional]
 
 ### Return type
 

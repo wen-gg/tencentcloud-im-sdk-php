@@ -1,11 +1,9 @@
-# CommonResponse
+# GetCosSigRequest
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**actionStatus** | **string** | 请求处理的结果，OK 表示处理成功，FAIL 表示失败 | [optional] 
-**errorInfo** | **string** | 错误信息 | [optional] 
-**errorCode** | **int** | 错误码，0表示成功，非0表示失败 | 
+**rawURLs** | [**\TencentCloud\IM\Model\GetCosSigRequestRawURLs[]**](GetCosSigRequestRawURLs.md) | 批量查询的文件 URL，可从 IM 富媒体消息的 URL 字段获取 | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

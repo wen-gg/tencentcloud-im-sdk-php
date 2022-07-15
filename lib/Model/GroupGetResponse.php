@@ -50,7 +50,7 @@ class GroupGetResponse extends CommonResponse
       */
     protected static $openAPITypes = [
         'resultItem' => 'object[]',
-        'currentSequence' => 'string[]',
+        'currentSequence' => 'int',
         'errorDisplay' => 'string'
     ];
 
@@ -61,7 +61,7 @@ class GroupGetResponse extends CommonResponse
       */
     protected static $openAPIFormats = [
         'resultItem' => null,
-        'currentSequence' => null,
+        'currentSequence' => 'int32',
         'errorDisplay' => null
     ];
 
@@ -231,7 +231,7 @@ class GroupGetResponse extends CommonResponse
     /**
      * Gets currentSequence
      *
-     * @return string[]|null
+     * @return int|null
      */
     public function getCurrentSequence()
     {
@@ -241,7 +241,7 @@ class GroupGetResponse extends CommonResponse
     /**
      * Sets currentSequence
      *
-     * @param string[]|null $currentSequence 返回最新的分组 Sequence
+     * @param int|null $currentSequence 返回最新的分组 Sequence
      *
      * @return $this
      */

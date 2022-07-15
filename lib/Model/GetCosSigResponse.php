@@ -1,6 +1,6 @@
 <?php
 /**
- * CommonResponse
+ * GetCosSigResponse
  *
  * PHP version 5
  *
@@ -23,18 +23,16 @@
  */
 
 namespace TencentCloud\IM\Model;
-
-use \ArrayAccess;
 use \TencentCloud\IM\ObjectSerializer;
 
 /**
- * CommonResponse Class Doc Comment
+ * GetCosSigResponse Class Doc Comment
  *
  * @category Class
  * @package  TencentCloud\IM
 
  */
-class CommonResponse implements ModelInterface, ArrayAccess
+class GetCosSigResponse extends CommonResponse 
 {
     const DISCRIMINATOR = null;
 
@@ -43,7 +41,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'CommonResponse';
+    protected static $openAPIModelName = 'GetCosSigResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -51,9 +49,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'actionStatus' => 'string',
-        'errorInfo' => 'string',
-        'errorCode' => 'int'
+        'preSigURLs' => 'object[]'
     ];
 
     /**
@@ -62,9 +58,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'actionStatus' => null,
-        'errorInfo' => null,
-        'errorCode' => 'int32'
+        'preSigURLs' => null
     ];
 
     /**
@@ -74,7 +68,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -84,7 +78,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -94,9 +88,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'actionStatus' => 'ActionStatus',
-        'errorInfo' => 'ErrorInfo',
-        'errorCode' => 'ErrorCode'
+        'preSigURLs' => 'PreSigURLs'
     ];
 
     /**
@@ -105,9 +97,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'actionStatus' => 'setActionStatus',
-        'errorInfo' => 'setErrorInfo',
-        'errorCode' => 'setErrorCode'
+        'preSigURLs' => 'setPreSigURLs'
     ];
 
     /**
@@ -116,9 +106,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'actionStatus' => 'getActionStatus',
-        'errorInfo' => 'getErrorInfo',
-        'errorCode' => 'getErrorCode'
+        'preSigURLs' => 'getPreSigURLs'
     ];
 
     /**
@@ -129,7 +117,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      */
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -139,7 +127,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      */
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -149,7 +137,7 @@ class CommonResponse implements ModelInterface, ArrayAccess
      */
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -166,12 +154,6 @@ class CommonResponse implements ModelInterface, ArrayAccess
 
     
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var mixed[]
-     */
-    protected $container = [];
 
     /**
      * Constructor
@@ -181,9 +163,9 @@ class CommonResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['actionStatus'] = isset($data['actionStatus']) ? $data['actionStatus'] : null;
-        $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        parent::__construct($data);
+
+        $this->container['preSigURLs'] = isset($data['preSigURLs']) ? $data['preSigURLs'] : null;
     }
 
     /**
@@ -193,11 +175,8 @@ class CommonResponse implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['errorCode'] === null) {
-            $invalidProperties[] = "'errorCode' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -214,73 +193,25 @@ class CommonResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets actionStatus
+     * Gets preSigURLs
      *
-     * @return string|null
+     * @return object[]|null
      */
-    public function getActionStatus()
+    public function getPreSigURLs()
     {
-        return $this->container['actionStatus'];
+        return $this->container['preSigURLs'];
     }
 
     /**
-     * Sets actionStatus
+     * Sets preSigURLs
      *
-     * @param string|null $actionStatus 请求处理的结果，OK 表示处理成功，FAIL 表示失败
+     * @param object[]|null $preSigURLs 批量查询结果返回
      *
      * @return $this
      */
-    public function setActionStatus($actionStatus)
+    public function setPreSigURLs($preSigURLs)
     {
-        $this->container['actionStatus'] = $actionStatus;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorInfo
-     *
-     * @return string|null
-     */
-    public function getErrorInfo()
-    {
-        return $this->container['errorInfo'];
-    }
-
-    /**
-     * Sets errorInfo
-     *
-     * @param string|null $errorInfo 错误信息
-     *
-     * @return $this
-     */
-    public function setErrorInfo($errorInfo)
-    {
-        $this->container['errorInfo'] = $errorInfo;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorCode
-     *
-     * @return int
-     */
-    public function getErrorCode()
-    {
-        return $this->container['errorCode'];
-    }
-
-    /**
-     * Sets errorCode
-     *
-     * @param int $errorCode 错误码，0表示成功，非0表示失败
-     *
-     * @return $this
-     */
-    public function setErrorCode($errorCode)
-    {
-        $this->container['errorCode'] = $errorCode;
+        $this->container['preSigURLs'] = $preSigURLs;
 
         return $this;
     }

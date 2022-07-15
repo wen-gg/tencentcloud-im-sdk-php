@@ -1,6 +1,6 @@
 <?php
 /**
- * ImportMsgRequest
+ * ModifyGroupMsgRequest
  *
  * PHP version 5
  *
@@ -28,13 +28,13 @@ use \ArrayAccess;
 use \TencentCloud\IM\ObjectSerializer;
 
 /**
- * ImportMsgRequest Class Doc Comment
+ * ModifyGroupMsgRequest Class Doc Comment
  *
  * @category Class
  * @package  TencentCloud\IM
 
  */
-class ImportMsgRequest implements ModelInterface, ArrayAccess
+class ModifyGroupMsgRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -43,7 +43,7 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ImportMsgRequest';
+    protected static $openAPIModelName = 'ModifyGroupMsgRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -51,12 +51,8 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'syncFromOldSystem' => 'int',
-        'fromAccount' => 'string',
-        'toAccount' => 'string',
+        'groupId' => 'string',
         'msgSeq' => 'int',
-        'msgRandom' => 'int',
-        'msgTimeStamp' => 'int',
         'msgBody' => '\TencentCloud\IM\Model\TIMMsgElement[]',
         'cloudCustomData' => 'string'
     ];
@@ -67,12 +63,8 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'syncFromOldSystem' => 'int32',
-        'fromAccount' => null,
-        'toAccount' => null,
+        'groupId' => null,
         'msgSeq' => 'int32',
-        'msgRandom' => 'int32',
-        'msgTimeStamp' => 'int32',
         'msgBody' => null,
         'cloudCustomData' => null
     ];
@@ -104,12 +96,8 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'syncFromOldSystem' => 'SyncFromOldSystem',
-        'fromAccount' => 'From_Account',
-        'toAccount' => 'To_Account',
+        'groupId' => 'GroupId',
         'msgSeq' => 'MsgSeq',
-        'msgRandom' => 'MsgRandom',
-        'msgTimeStamp' => 'MsgTimeStamp',
         'msgBody' => 'MsgBody',
         'cloudCustomData' => 'CloudCustomData'
     ];
@@ -120,12 +108,8 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'syncFromOldSystem' => 'setSyncFromOldSystem',
-        'fromAccount' => 'setFromAccount',
-        'toAccount' => 'setToAccount',
+        'groupId' => 'setGroupId',
         'msgSeq' => 'setMsgSeq',
-        'msgRandom' => 'setMsgRandom',
-        'msgTimeStamp' => 'setMsgTimeStamp',
         'msgBody' => 'setMsgBody',
         'cloudCustomData' => 'setCloudCustomData'
     ];
@@ -136,12 +120,8 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'syncFromOldSystem' => 'getSyncFromOldSystem',
-        'fromAccount' => 'getFromAccount',
-        'toAccount' => 'getToAccount',
+        'groupId' => 'getGroupId',
         'msgSeq' => 'getMsgSeq',
-        'msgRandom' => 'getMsgRandom',
-        'msgTimeStamp' => 'getMsgTimeStamp',
         'msgBody' => 'getMsgBody',
         'cloudCustomData' => 'getCloudCustomData'
     ];
@@ -187,23 +167,8 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const SYNC_FROM_OLD_SYSTEM_1 = 1;
-    const SYNC_FROM_OLD_SYSTEM_2 = 2;
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getSyncFromOldSystemAllowableValues()
-    {
-        return [
-            self::SYNC_FROM_OLD_SYSTEM_1,
-            self::SYNC_FROM_OLD_SYSTEM_2,
-        ];
-    }
     
 
     /**
@@ -221,12 +186,8 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['syncFromOldSystem'] = isset($data['syncFromOldSystem']) ? $data['syncFromOldSystem'] : null;
-        $this->container['fromAccount'] = isset($data['fromAccount']) ? $data['fromAccount'] : null;
-        $this->container['toAccount'] = isset($data['toAccount']) ? $data['toAccount'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['msgSeq'] = isset($data['msgSeq']) ? $data['msgSeq'] : null;
-        $this->container['msgRandom'] = isset($data['msgRandom']) ? $data['msgRandom'] : null;
-        $this->container['msgTimeStamp'] = isset($data['msgTimeStamp']) ? $data['msgTimeStamp'] : null;
         $this->container['msgBody'] = isset($data['msgBody']) ? $data['msgBody'] : null;
         $this->container['cloudCustomData'] = isset($data['cloudCustomData']) ? $data['cloudCustomData'] : null;
     }
@@ -240,31 +201,11 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['syncFromOldSystem'] === null) {
-            $invalidProperties[] = "'syncFromOldSystem' can't be null";
+        if ($this->container['groupId'] === null) {
+            $invalidProperties[] = "'groupId' can't be null";
         }
-        $allowedValues = $this->getSyncFromOldSystemAllowableValues();
-        if (!is_null($this->container['syncFromOldSystem']) && !in_array($this->container['syncFromOldSystem'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'syncFromOldSystem', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['fromAccount'] === null) {
-            $invalidProperties[] = "'fromAccount' can't be null";
-        }
-        if ($this->container['toAccount'] === null) {
-            $invalidProperties[] = "'toAccount' can't be null";
-        }
-        if ($this->container['msgRandom'] === null) {
-            $invalidProperties[] = "'msgRandom' can't be null";
-        }
-        if ($this->container['msgTimeStamp'] === null) {
-            $invalidProperties[] = "'msgTimeStamp' can't be null";
-        }
-        if ($this->container['msgBody'] === null) {
-            $invalidProperties[] = "'msgBody' can't be null";
+        if ($this->container['msgSeq'] === null) {
+            $invalidProperties[] = "'msgSeq' can't be null";
         }
         return $invalidProperties;
     }
@@ -282,82 +223,25 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets syncFromOldSystem
-     *
-     * @return int
-     */
-    public function getSyncFromOldSystem()
-    {
-        return $this->container['syncFromOldSystem'];
-    }
-
-    /**
-     * Sets syncFromOldSystem
-     *
-     * @param int $syncFromOldSystem 该字段只能填1或2，其他值是非法值 1表示实时消息导入，消息计入未读计数 2表示历史消息导入，消息不计入未读
-     *
-     * @return $this
-     */
-    public function setSyncFromOldSystem($syncFromOldSystem)
-    {
-        $allowedValues = $this->getSyncFromOldSystemAllowableValues();
-        if (!in_array($syncFromOldSystem, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'syncFromOldSystem', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['syncFromOldSystem'] = $syncFromOldSystem;
-
-        return $this;
-    }
-
-    /**
-     * Gets fromAccount
+     * Gets groupId
      *
      * @return string
      */
-    public function getFromAccount()
+    public function getGroupId()
     {
-        return $this->container['fromAccount'];
+        return $this->container['groupId'];
     }
 
     /**
-     * Sets fromAccount
+     * Sets groupId
      *
-     * @param string $fromAccount 消息发送方 UserID，用于指定发送消息方
+     * @param string $groupId 操作的群 ID
      *
      * @return $this
      */
-    public function setFromAccount($fromAccount)
+    public function setGroupId($groupId)
     {
-        $this->container['fromAccount'] = $fromAccount;
-
-        return $this;
-    }
-
-    /**
-     * Gets toAccount
-     *
-     * @return string
-     */
-    public function getToAccount()
-    {
-        return $this->container['toAccount'];
-    }
-
-    /**
-     * Sets toAccount
-     *
-     * @param string $toAccount 消息接收方 UserID
-     *
-     * @return $this
-     */
-    public function setToAccount($toAccount)
-    {
-        $this->container['toAccount'] = $toAccount;
+        $this->container['groupId'] = $groupId;
 
         return $this;
     }
@@ -365,7 +249,7 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
     /**
      * Gets msgSeq
      *
-     * @return int|null
+     * @return int
      */
     public function getMsgSeq()
     {
@@ -375,7 +259,7 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
     /**
      * Sets msgSeq
      *
-     * @param int|null $msgSeq 消息序列号（32位无符号整数），后台会根据该字段去重及进行同秒内消息的排序，详细规则请看本接口的功能说明。若不填该字段，则由后台填入随机数
+     * @param int $msgSeq 自请求修改的消息 seq
      *
      * @return $this
      */
@@ -387,57 +271,9 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets msgRandom
-     *
-     * @return int
-     */
-    public function getMsgRandom()
-    {
-        return $this->container['msgRandom'];
-    }
-
-    /**
-     * Sets msgRandom
-     *
-     * @param int $msgRandom 消息随机数（32位无符号整数），后台用于同一秒内的消息去重。请确保该字段填的是随机
-     *
-     * @return $this
-     */
-    public function setMsgRandom($msgRandom)
-    {
-        $this->container['msgRandom'] = $msgRandom;
-
-        return $this;
-    }
-
-    /**
-     * Gets msgTimeStamp
-     *
-     * @return int
-     */
-    public function getMsgTimeStamp()
-    {
-        return $this->container['msgTimeStamp'];
-    }
-
-    /**
-     * Sets msgTimeStamp
-     *
-     * @param int $msgTimeStamp 消息时间戳，UNIX 时间戳，单位为秒。后台会根据该字段去重，详细规则请看本接口的功能说明。
-     *
-     * @return $this
-     */
-    public function setMsgTimeStamp($msgTimeStamp)
-    {
-        $this->container['msgTimeStamp'] = $msgTimeStamp;
-
-        return $this;
-    }
-
-    /**
      * Gets msgBody
      *
-     * @return \TencentCloud\IM\Model\TIMMsgElement[]
+     * @return \TencentCloud\IM\Model\TIMMsgElement[]|null
      */
     public function getMsgBody()
     {
@@ -447,7 +283,7 @@ class ImportMsgRequest implements ModelInterface, ArrayAccess
     /**
      * Sets msgBody
      *
-     * @param \TencentCloud\IM\Model\TIMMsgElement[] $msgBody 消息内容，具体格式请参考（https://cloud.tencent.com/document/product/269/2720）消息格式描述（注意，一条消息可包括多种消息元素，MsgBody 为 Array 类型）
+     * @param \TencentCloud\IM\Model\TIMMsgElement[]|null $msgBody msgBody
      *
      * @return $this
      */
