@@ -62,7 +62,8 @@ class SendSingleChatMsgRequest implements ModelInterface, ArrayAccess
         'sendMsgControl' => 'string[]',
         'msgBody' => '\TencentCloud\IM\Model\TIMMsgElement[]',
         'cloudCustomData' => 'string',
-        'offlinePushInfo' => '\TencentCloud\IM\Model\OfflinePushInfo'
+        'offlinePushInfo' => '\TencentCloud\IM\Model\OfflinePushInfo',
+        'isNeedReadReceipt' => 'int'
     ];
 
     /**
@@ -82,7 +83,8 @@ class SendSingleChatMsgRequest implements ModelInterface, ArrayAccess
         'sendMsgControl' => null,
         'msgBody' => null,
         'cloudCustomData' => null,
-        'offlinePushInfo' => null
+        'offlinePushInfo' => null,
+        'isNeedReadReceipt' => 'int32'
     ];
 
     /**
@@ -123,7 +125,8 @@ class SendSingleChatMsgRequest implements ModelInterface, ArrayAccess
         'sendMsgControl' => 'SendMsgControl',
         'msgBody' => 'MsgBody',
         'cloudCustomData' => 'CloudCustomData',
-        'offlinePushInfo' => 'OfflinePushInfo'
+        'offlinePushInfo' => 'OfflinePushInfo',
+        'isNeedReadReceipt' => 'IsNeedReadReceipt'
     ];
 
     /**
@@ -143,7 +146,8 @@ class SendSingleChatMsgRequest implements ModelInterface, ArrayAccess
         'sendMsgControl' => 'setSendMsgControl',
         'msgBody' => 'setMsgBody',
         'cloudCustomData' => 'setCloudCustomData',
-        'offlinePushInfo' => 'setOfflinePushInfo'
+        'offlinePushInfo' => 'setOfflinePushInfo',
+        'isNeedReadReceipt' => 'setIsNeedReadReceipt'
     ];
 
     /**
@@ -163,7 +167,8 @@ class SendSingleChatMsgRequest implements ModelInterface, ArrayAccess
         'sendMsgControl' => 'getSendMsgControl',
         'msgBody' => 'getMsgBody',
         'cloudCustomData' => 'getCloudCustomData',
-        'offlinePushInfo' => 'getOfflinePushInfo'
+        'offlinePushInfo' => 'getOfflinePushInfo',
+        'isNeedReadReceipt' => 'getIsNeedReadReceipt'
     ];
 
     /**
@@ -253,6 +258,7 @@ class SendSingleChatMsgRequest implements ModelInterface, ArrayAccess
         $this->container['msgBody'] = isset($data['msgBody']) ? $data['msgBody'] : null;
         $this->container['cloudCustomData'] = isset($data['cloudCustomData']) ? $data['cloudCustomData'] : null;
         $this->container['offlinePushInfo'] = isset($data['offlinePushInfo']) ? $data['offlinePushInfo'] : null;
+        $this->container['isNeedReadReceipt'] = isset($data['isNeedReadReceipt']) ? $data['isNeedReadReceipt'] : null;
     }
 
     /**
@@ -510,7 +516,7 @@ class SendSingleChatMsgRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sendMsgControl
      *
-     * @param string[]|null $sendMsgControl 消息发送控制选项，是一个 String 数组，只对本条消息有效。\"NoUnread\"表示该条消息不计入未读数。\"NoLastMsg\"表示该条消息不更新会话列表。\"WithMuteNotifications\"表示该条消息的接收方对发送方设置的免打扰选项生效（默认不生效）。
+     * @param string[]|null $sendMsgControl 消息发送控制选项，是一个 String 数组，只对本条消息有效。\"NoUnread\"表示该条消息不计入未读数。\"NoLastMsg\"表示该条消息不更新会话列表。\"WithMuteNotifications\"表示该条消息的接收方对发送方设置的免打扰选项生效（默认不生效）
      *
      * @return $this
      */
@@ -589,6 +595,30 @@ class SendSingleChatMsgRequest implements ModelInterface, ArrayAccess
     public function setOfflinePushInfo($offlinePushInfo)
     {
         $this->container['offlinePushInfo'] = $offlinePushInfo;
+
+        return $this;
+    }
+
+    /**
+     * Gets isNeedReadReceipt
+     *
+     * @return int|null
+     */
+    public function getIsNeedReadReceipt()
+    {
+        return $this->container['isNeedReadReceipt'];
+    }
+
+    /**
+     * Sets isNeedReadReceipt
+     *
+     * @param int|null $isNeedReadReceipt 该条消息是否需要已读回执，0为不需要，1为需要，默认为0
+     *
+     * @return $this
+     */
+    public function setIsNeedReadReceipt($isNeedReadReceipt)
+    {
+        $this->container['isNeedReadReceipt'] = $isNeedReadReceipt;
 
         return $this;
     }

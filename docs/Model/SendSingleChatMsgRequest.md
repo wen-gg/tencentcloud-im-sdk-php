@@ -11,10 +11,11 @@ Name | Type | Description | Notes
 **msgRandom** | **int** | 消息随机数（32位无符号整数），后台用于同一秒内的消息去重。请确保该字段填的是随机 | 
 **msgTimeStamp** | **int** | 消息时间戳，UNIX 时间戳（单位：秒） | [optional] 
 **forbidCallbackControl** | **string[]** | 消息回调禁止开关，只对本条消息有效，ForbidBeforeSendMsgCallback 表示禁止发消息前回调，ForbidAfterSendMsgCallback 表示禁止发消息后回调 | [optional] 
-**sendMsgControl** | **string[]** | 消息发送控制选项，是一个 String 数组，只对本条消息有效。\&quot;NoUnread\&quot;表示该条消息不计入未读数。\&quot;NoLastMsg\&quot;表示该条消息不更新会话列表。\&quot;WithMuteNotifications\&quot;表示该条消息的接收方对发送方设置的免打扰选项生效（默认不生效）。 | [optional] 
+**sendMsgControl** | **string[]** | 消息发送控制选项，是一个 String 数组，只对本条消息有效。\&quot;NoUnread\&quot;表示该条消息不计入未读数。\&quot;NoLastMsg\&quot;表示该条消息不更新会话列表。\&quot;WithMuteNotifications\&quot;表示该条消息的接收方对发送方设置的免打扰选项生效（默认不生效） | [optional] 
 **msgBody** | [**\TencentCloud\IM\Model\TIMMsgElement[]**](TIMMsgElement.md) |  | 
 **cloudCustomData** | **string** |  | [optional] 
 **offlinePushInfo** | [**\TencentCloud\IM\Model\OfflinePushInfo**](OfflinePushInfo.md) |  | [optional] 
+**isNeedReadReceipt** | **int** | 该条消息是否需要已读回执，0为不需要，1为需要，默认为0 | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -459,7 +459,7 @@ class BatchSendSingleChatMsgRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sendMsgControl
      *
-     * @param string[]|null $sendMsgControl 消息发送控制选项，是一个 String 数组，只对本次请求有效。\"NoUnread\"表示该条消息不计入未读数。\"NoLastMsg\"表示该条消息不更新会话列表。\"WithMuteNotifications\"表示该条消息的接收方对发送方设置的免打扰选项生效（默认不生效）。
+     * @param string[]|null $sendMsgControl 消息发送控制选项，是一个 String 数组，只对本次请求有效。\"NoUnread\"表示该条消息不计入未读数。\"NoLastMsg\"表示该条消息不更新会话列表。
      *
      * @return $this
      */
