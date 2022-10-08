@@ -54,7 +54,8 @@ class GroupMsgGetSimpleRequest implements ModelInterface, ArrayAccess
         'groupId' => 'string',
         'reqMsgNumber' => 'int',
         'reqMsgSeq' => 'int',
-        'withRecalledMsg' => 'int'
+        'withRecalledMsg' => 'int',
+        'topicId' => 'string'
     ];
 
     /**
@@ -66,7 +67,8 @@ class GroupMsgGetSimpleRequest implements ModelInterface, ArrayAccess
         'groupId' => null,
         'reqMsgNumber' => 'int32',
         'reqMsgSeq' => 'int32',
-        'withRecalledMsg' => 'int32'
+        'withRecalledMsg' => 'int32',
+        'topicId' => null
     ];
 
     /**
@@ -99,7 +101,8 @@ class GroupMsgGetSimpleRequest implements ModelInterface, ArrayAccess
         'groupId' => 'GroupId',
         'reqMsgNumber' => 'ReqMsgNumber',
         'reqMsgSeq' => 'ReqMsgSeq',
-        'withRecalledMsg' => 'WithRecalledMsg'
+        'withRecalledMsg' => 'WithRecalledMsg',
+        'topicId' => 'TopicId'
     ];
 
     /**
@@ -111,7 +114,8 @@ class GroupMsgGetSimpleRequest implements ModelInterface, ArrayAccess
         'groupId' => 'setGroupId',
         'reqMsgNumber' => 'setReqMsgNumber',
         'reqMsgSeq' => 'setReqMsgSeq',
-        'withRecalledMsg' => 'setWithRecalledMsg'
+        'withRecalledMsg' => 'setWithRecalledMsg',
+        'topicId' => 'setTopicId'
     ];
 
     /**
@@ -123,7 +127,8 @@ class GroupMsgGetSimpleRequest implements ModelInterface, ArrayAccess
         'groupId' => 'getGroupId',
         'reqMsgNumber' => 'getReqMsgNumber',
         'reqMsgSeq' => 'getReqMsgSeq',
-        'withRecalledMsg' => 'getWithRecalledMsg'
+        'withRecalledMsg' => 'getWithRecalledMsg',
+        'topicId' => 'getTopicId'
     ];
 
     /**
@@ -190,6 +195,7 @@ class GroupMsgGetSimpleRequest implements ModelInterface, ArrayAccess
         $this->container['reqMsgNumber'] = isset($data['reqMsgNumber']) ? $data['reqMsgNumber'] : null;
         $this->container['reqMsgSeq'] = isset($data['reqMsgSeq']) ? $data['reqMsgSeq'] : null;
         $this->container['withRecalledMsg'] = isset($data['withRecalledMsg']) ? $data['withRecalledMsg'] : null;
+        $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
     }
 
     /**
@@ -323,6 +329,30 @@ class GroupMsgGetSimpleRequest implements ModelInterface, ArrayAccess
     public function setWithRecalledMsg($withRecalledMsg)
     {
         $this->container['withRecalledMsg'] = $withRecalledMsg;
+
+        return $this;
+    }
+
+    /**
+     * Gets topicId
+     *
+     * @return string|null
+     */
+    public function getTopicId()
+    {
+        return $this->container['topicId'];
+    }
+
+    /**
+     * Sets topicId
+     *
+     * @param string|null $topicId 话题的 ID, 仅支持话题的社群适用此选项
+     *
+     * @return $this
+     */
+    public function setTopicId($topicId)
+    {
+        $this->container['topicId'] = $topicId;
 
         return $this;
     }

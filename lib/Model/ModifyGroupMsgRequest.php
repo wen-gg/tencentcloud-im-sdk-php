@@ -54,7 +54,8 @@ class ModifyGroupMsgRequest implements ModelInterface, ArrayAccess
         'groupId' => 'string',
         'msgSeq' => 'int',
         'msgBody' => '\TencentCloud\IM\Model\TIMMsgElement[]',
-        'cloudCustomData' => 'string'
+        'cloudCustomData' => 'string',
+        'topicId' => 'string'
     ];
 
     /**
@@ -66,7 +67,8 @@ class ModifyGroupMsgRequest implements ModelInterface, ArrayAccess
         'groupId' => null,
         'msgSeq' => 'int32',
         'msgBody' => null,
-        'cloudCustomData' => null
+        'cloudCustomData' => null,
+        'topicId' => null
     ];
 
     /**
@@ -99,7 +101,8 @@ class ModifyGroupMsgRequest implements ModelInterface, ArrayAccess
         'groupId' => 'GroupId',
         'msgSeq' => 'MsgSeq',
         'msgBody' => 'MsgBody',
-        'cloudCustomData' => 'CloudCustomData'
+        'cloudCustomData' => 'CloudCustomData',
+        'topicId' => 'TopicId'
     ];
 
     /**
@@ -111,7 +114,8 @@ class ModifyGroupMsgRequest implements ModelInterface, ArrayAccess
         'groupId' => 'setGroupId',
         'msgSeq' => 'setMsgSeq',
         'msgBody' => 'setMsgBody',
-        'cloudCustomData' => 'setCloudCustomData'
+        'cloudCustomData' => 'setCloudCustomData',
+        'topicId' => 'setTopicId'
     ];
 
     /**
@@ -123,7 +127,8 @@ class ModifyGroupMsgRequest implements ModelInterface, ArrayAccess
         'groupId' => 'getGroupId',
         'msgSeq' => 'getMsgSeq',
         'msgBody' => 'getMsgBody',
-        'cloudCustomData' => 'getCloudCustomData'
+        'cloudCustomData' => 'getCloudCustomData',
+        'topicId' => 'getTopicId'
     ];
 
     /**
@@ -190,6 +195,7 @@ class ModifyGroupMsgRequest implements ModelInterface, ArrayAccess
         $this->container['msgSeq'] = isset($data['msgSeq']) ? $data['msgSeq'] : null;
         $this->container['msgBody'] = isset($data['msgBody']) ? $data['msgBody'] : null;
         $this->container['cloudCustomData'] = isset($data['cloudCustomData']) ? $data['cloudCustomData'] : null;
+        $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
     }
 
     /**
@@ -314,6 +320,30 @@ class ModifyGroupMsgRequest implements ModelInterface, ArrayAccess
     public function setCloudCustomData($cloudCustomData)
     {
         $this->container['cloudCustomData'] = $cloudCustomData;
+
+        return $this;
+    }
+
+    /**
+     * Gets topicId
+     *
+     * @return string|null
+     */
+    public function getTopicId()
+    {
+        return $this->container['topicId'];
+    }
+
+    /**
+     * Sets topicId
+     *
+     * @param string|null $topicId 话题的 ID, 仅支持话题的社群适用此选项
+     *
+     * @return $this
+     */
+    public function setTopicId($topicId)
+    {
+        $this->container['topicId'] = $topicId;
 
         return $this;
     }

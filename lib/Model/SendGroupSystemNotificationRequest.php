@@ -53,7 +53,8 @@ class SendGroupSystemNotificationRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'groupId' => 'string',
         'toMembersAccount' => 'string[]',
-        'content' => 'string'
+        'content' => 'string',
+        'topicId' => 'string'
     ];
 
     /**
@@ -64,7 +65,8 @@ class SendGroupSystemNotificationRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'groupId' => null,
         'toMembersAccount' => null,
-        'content' => null
+        'content' => null,
+        'topicId' => null
     ];
 
     /**
@@ -96,7 +98,8 @@ class SendGroupSystemNotificationRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'groupId' => 'GroupId',
         'toMembersAccount' => 'ToMembers_Account',
-        'content' => 'Content'
+        'content' => 'Content',
+        'topicId' => 'TopicId'
     ];
 
     /**
@@ -107,7 +110,8 @@ class SendGroupSystemNotificationRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
         'groupId' => 'setGroupId',
         'toMembersAccount' => 'setToMembersAccount',
-        'content' => 'setContent'
+        'content' => 'setContent',
+        'topicId' => 'setTopicId'
     ];
 
     /**
@@ -118,7 +122,8 @@ class SendGroupSystemNotificationRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
         'groupId' => 'getGroupId',
         'toMembersAccount' => 'getToMembersAccount',
-        'content' => 'getContent'
+        'content' => 'getContent',
+        'topicId' => 'getTopicId'
     ];
 
     /**
@@ -184,6 +189,7 @@ class SendGroupSystemNotificationRequest implements ModelInterface, ArrayAccess
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['toMembersAccount'] = isset($data['toMembersAccount']) ? $data['toMembersAccount'] : null;
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
+        $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
     }
 
     /**
@@ -284,6 +290,30 @@ class SendGroupSystemNotificationRequest implements ModelInterface, ArrayAccess
     public function setContent($content)
     {
         $this->container['content'] = $content;
+
+        return $this;
+    }
+
+    /**
+     * Gets topicId
+     *
+     * @return string|null
+     */
+    public function getTopicId()
+    {
+        return $this->container['topicId'];
+    }
+
+    /**
+     * Sets topicId
+     *
+     * @param string|null $topicId 话题的 ID, 仅支持话题的社群适用此选项
+     *
+     * @return $this
+     */
+    public function setTopicId($topicId)
+    {
+        $this->container['topicId'] = $topicId;
 
         return $this;
     }

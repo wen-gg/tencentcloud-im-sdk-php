@@ -20,7 +20,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "tencentcloud/tencentcloud-im-sdk-php": "^1.0.5"
+    "tencentcloud/tencentcloud-im-sdk-php": "^1.0.6"
   }
 }
 ```

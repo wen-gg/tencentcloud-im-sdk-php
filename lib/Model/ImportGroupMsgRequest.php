@@ -53,7 +53,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'groupId' => 'string',
         'recentContactFlag' => 'int',
-        'msgList' => '\TencentCloud\IM\Model\ImportGroupMsgRequestMsgList[]'
+        'msgList' => '\TencentCloud\IM\Model\ImportGroupMsgRequestMsgList[]',
+        'topicId' => 'string'
     ];
 
     /**
@@ -64,7 +65,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'groupId' => null,
         'recentContactFlag' => 'int32',
-        'msgList' => null
+        'msgList' => null,
+        'topicId' => null
     ];
 
     /**
@@ -96,7 +98,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'groupId' => 'GroupId',
         'recentContactFlag' => 'RecentContactFlag',
-        'msgList' => 'MsgList'
+        'msgList' => 'MsgList',
+        'topicId' => 'TopicId'
     ];
 
     /**
@@ -107,7 +110,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
         'groupId' => 'setGroupId',
         'recentContactFlag' => 'setRecentContactFlag',
-        'msgList' => 'setMsgList'
+        'msgList' => 'setMsgList',
+        'topicId' => 'setTopicId'
     ];
 
     /**
@@ -118,7 +122,8 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
         'groupId' => 'getGroupId',
         'recentContactFlag' => 'getRecentContactFlag',
-        'msgList' => 'getMsgList'
+        'msgList' => 'getMsgList',
+        'topicId' => 'getTopicId'
     ];
 
     /**
@@ -184,6 +189,7 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['recentContactFlag'] = isset($data['recentContactFlag']) ? $data['recentContactFlag'] : null;
         $this->container['msgList'] = isset($data['msgList']) ? $data['msgList'] : null;
+        $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
     }
 
     /**
@@ -284,6 +290,30 @@ class ImportGroupMsgRequest implements ModelInterface, ArrayAccess
     public function setMsgList($msgList)
     {
         $this->container['msgList'] = $msgList;
+
+        return $this;
+    }
+
+    /**
+     * Gets topicId
+     *
+     * @return string|null
+     */
+    public function getTopicId()
+    {
+        return $this->container['topicId'];
+    }
+
+    /**
+     * Sets topicId
+     *
+     * @param string|null $topicId 话题的 ID, 仅支持话题的社群适用此选项
+     *
+     * @return $this
+     */
+    public function setTopicId($topicId)
+    {
+        $this->container['topicId'] = $topicId;
 
         return $this;
     }

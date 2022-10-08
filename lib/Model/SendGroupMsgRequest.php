@@ -60,7 +60,9 @@ class SendGroupMsgRequest implements ModelInterface, ArrayAccess
         'forbidCallbackControl' => '\TencentCloud\IM\Model\ForbidCallbackControl[]',
         'onlineOnlyFlag' => 'int',
         'sendMsgControl' => '\TencentCloud\IM\Model\SendMsgControl[]',
-        'cloudCustomData' => 'string'
+        'cloudCustomData' => 'string',
+        'toAccount' => 'string[]',
+        'topicId' => 'string'
     ];
 
     /**
@@ -78,7 +80,9 @@ class SendGroupMsgRequest implements ModelInterface, ArrayAccess
         'forbidCallbackControl' => null,
         'onlineOnlyFlag' => 'int32',
         'sendMsgControl' => null,
-        'cloudCustomData' => null
+        'cloudCustomData' => null,
+        'toAccount' => null,
+        'topicId' => null
     ];
 
     /**
@@ -117,7 +121,9 @@ class SendGroupMsgRequest implements ModelInterface, ArrayAccess
         'forbidCallbackControl' => 'ForbidCallbackControl',
         'onlineOnlyFlag' => 'OnlineOnlyFlag',
         'sendMsgControl' => 'SendMsgControl',
-        'cloudCustomData' => 'CloudCustomData'
+        'cloudCustomData' => 'CloudCustomData',
+        'toAccount' => 'To_Account',
+        'topicId' => 'TopicId'
     ];
 
     /**
@@ -135,7 +141,9 @@ class SendGroupMsgRequest implements ModelInterface, ArrayAccess
         'forbidCallbackControl' => 'setForbidCallbackControl',
         'onlineOnlyFlag' => 'setOnlineOnlyFlag',
         'sendMsgControl' => 'setSendMsgControl',
-        'cloudCustomData' => 'setCloudCustomData'
+        'cloudCustomData' => 'setCloudCustomData',
+        'toAccount' => 'setToAccount',
+        'topicId' => 'setTopicId'
     ];
 
     /**
@@ -153,7 +161,9 @@ class SendGroupMsgRequest implements ModelInterface, ArrayAccess
         'forbidCallbackControl' => 'getForbidCallbackControl',
         'onlineOnlyFlag' => 'getOnlineOnlyFlag',
         'sendMsgControl' => 'getSendMsgControl',
-        'cloudCustomData' => 'getCloudCustomData'
+        'cloudCustomData' => 'getCloudCustomData',
+        'toAccount' => 'getToAccount',
+        'topicId' => 'getTopicId'
     ];
 
     /**
@@ -241,6 +251,8 @@ class SendGroupMsgRequest implements ModelInterface, ArrayAccess
         $this->container['onlineOnlyFlag'] = isset($data['onlineOnlyFlag']) ? $data['onlineOnlyFlag'] : null;
         $this->container['sendMsgControl'] = isset($data['sendMsgControl']) ? $data['sendMsgControl'] : null;
         $this->container['cloudCustomData'] = isset($data['cloudCustomData']) ? $data['cloudCustomData'] : null;
+        $this->container['toAccount'] = isset($data['toAccount']) ? $data['toAccount'] : null;
+        $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
     }
 
     /**
@@ -529,6 +541,54 @@ class SendGroupMsgRequest implements ModelInterface, ArrayAccess
     public function setCloudCustomData($cloudCustomData)
     {
         $this->container['cloudCustomData'] = $cloudCustomData;
+
+        return $this;
+    }
+
+    /**
+     * Gets toAccount
+     *
+     * @return string[]|null
+     */
+    public function getToAccount()
+    {
+        return $this->container['toAccount'];
+    }
+
+    /**
+     * Sets toAccount
+     *
+     * @param string[]|null $toAccount 指定消息接收者(接收者成员上限50个)，如果此字段被使用，消息则不计未读，仅旗舰版支持此功能，支持好友工作群（Work）、陌生人社交群（Public）、临时会议群（Meeting）
+     *
+     * @return $this
+     */
+    public function setToAccount($toAccount)
+    {
+        $this->container['toAccount'] = $toAccount;
+
+        return $this;
+    }
+
+    /**
+     * Gets topicId
+     *
+     * @return string|null
+     */
+    public function getTopicId()
+    {
+        return $this->container['topicId'];
+    }
+
+    /**
+     * Sets topicId
+     *
+     * @param string|null $topicId 话题的 ID, 仅支持话题的社群适用此选项
+     *
+     * @return $this
+     */
+    public function setTopicId($topicId)
+    {
+        $this->container['topicId'] = $topicId;
 
         return $this;
     }

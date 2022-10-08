@@ -52,7 +52,8 @@ class DeleteGroupMsgBySenderRequest implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'groupId' => 'string',
-        'senderAccount' => 'string'
+        'senderAccount' => 'string',
+        'topicId' => 'string'
     ];
 
     /**
@@ -62,7 +63,8 @@ class DeleteGroupMsgBySenderRequest implements ModelInterface, ArrayAccess
       */
     protected static $openAPIFormats = [
         'groupId' => null,
-        'senderAccount' => null
+        'senderAccount' => null,
+        'topicId' => null
     ];
 
     /**
@@ -93,7 +95,8 @@ class DeleteGroupMsgBySenderRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'groupId' => 'GroupId',
-        'senderAccount' => 'Sender_Account'
+        'senderAccount' => 'Sender_Account',
+        'topicId' => 'TopicId'
     ];
 
     /**
@@ -103,7 +106,8 @@ class DeleteGroupMsgBySenderRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'groupId' => 'setGroupId',
-        'senderAccount' => 'setSenderAccount'
+        'senderAccount' => 'setSenderAccount',
+        'topicId' => 'setTopicId'
     ];
 
     /**
@@ -113,7 +117,8 @@ class DeleteGroupMsgBySenderRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'groupId' => 'getGroupId',
-        'senderAccount' => 'getSenderAccount'
+        'senderAccount' => 'getSenderAccount',
+        'topicId' => 'getTopicId'
     ];
 
     /**
@@ -178,6 +183,7 @@ class DeleteGroupMsgBySenderRequest implements ModelInterface, ArrayAccess
     {
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['senderAccount'] = isset($data['senderAccount']) ? $data['senderAccount'] : null;
+        $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
     }
 
     /**
@@ -254,6 +260,30 @@ class DeleteGroupMsgBySenderRequest implements ModelInterface, ArrayAccess
     public function setSenderAccount($senderAccount)
     {
         $this->container['senderAccount'] = $senderAccount;
+
+        return $this;
+    }
+
+    /**
+     * Gets topicId
+     *
+     * @return string|null
+     */
+    public function getTopicId()
+    {
+        return $this->container['topicId'];
+    }
+
+    /**
+     * Sets topicId
+     *
+     * @param string|null $topicId 话题的 ID, 仅支持话题的社群适用此选项
+     *
+     * @return $this
+     */
+    public function setTopicId($topicId)
+    {
+        $this->container['topicId'] = $topicId;
 
         return $this;
     }

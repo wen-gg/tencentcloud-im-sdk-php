@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **onlineOnlyFlag** | **int** | 1表示消息仅发送在线成员，默认0表示发送所有成员，AVChatRoom(直播群)不支持该参数 | [optional] 
 **sendMsgControl** | [**\TencentCloud\IM\Model\SendMsgControl[]**](SendMsgControl.md) | 消息发送权限，NoLastMsg 只对单条消息有效，表示不更新最近联系人会话；NoUnread 不计未读，只对单条消息有效。（如果该消息 OnlineOnlyFlag 设置为1，则不允许使用该字段。） | [optional] 
 **cloudCustomData** | **string** | 消息自定义数据（云端保存，会发送到对端，程序卸载重装后还能拉取到） | [optional] 
+**toAccount** | **string[]** | 指定消息接收者(接收者成员上限50个)，如果此字段被使用，消息则不计未读，仅旗舰版支持此功能，支持好友工作群（Work）、陌生人社交群（Public）、临时会议群（Meeting） | [optional] 
+**topicId** | **string** | 话题的 ID, 仅支持话题的社群适用此选项 | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
