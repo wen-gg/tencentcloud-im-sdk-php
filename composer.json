@@ -1,5 +1,5 @@
 {
-    "name": "tencentcloud/tencentcloud-im-sdk-php",
+    "name": "wen-gg/tencentcloud-im-sdk-php",
     "version": "1.0.6",
     "description": "TIM REST API",
     "keywords": [
